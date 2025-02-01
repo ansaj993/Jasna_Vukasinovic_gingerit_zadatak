@@ -7,7 +7,6 @@ add_action('wp_enqueue_scripts', 'rtanj_scripts');
 function rtanj_scripts(){
     wp_enqueue_style('style-rtanj', get_stylesheet_uri(), '', 1.0, 'all');
     wp_enqueue_style('my-style-rtanj', get_theme_file_uri('/build/style-index.css'), '', 1.0, 'all');
-    wp_enqueue_style('my-style-rtanj-main', get_theme_file_uri('/build/index.css'), '', 1.0, 'all');
     wp_enqueue_style('namdhinggo-font', 'https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap');
     wp_enqueue_style('segoe-font', 'https://fonts.cdnfonts.com/css/segoe-ui-4');    
 }
@@ -65,9 +64,19 @@ function rtanjSidebars(){
     register_sidebar (
         array (
             'name' => 'Footer Col 2',
-            'id' => 'col-2-sidebar'
+            'id' => 'col-2-sidebar',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>'
         )
     );
+
+    register_sidebar (
+        array (
+            'name' => 'Footer Col 3',
+            'id' => 'col-3-sidebar'
+        )
+    );
+
     register_sidebar (
         array (
             'name' => 'Footer Col 4',

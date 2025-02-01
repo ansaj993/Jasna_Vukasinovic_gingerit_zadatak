@@ -1,19 +1,21 @@
-        <footer>
-            <div class="col-1">
+        <footer class="footer">
+            <div class="footer__col">
                 <?php the_custom_logo();?>
             </div>
 
-            <div class="col-2">
+            <div class="footer__col">
                 <?php dynamic_sidebar('col-2-sidebar');?>
             </div>
 
-            <div class="col-3">
+            <div class="footer__col">
                 <?php wp_nav_menu( array(
                     'theme_location' => 'footer-menu'
-                ));?>
+                ));
+                
+                dynamic_sidebar('col-3-sidebar');?>
             </div>
 
-            <div class="col-4">
+            <div class="footer__col">
                 <?php dynamic_sidebar('col-4-sidebar');?>
             </div>
         </footer>        

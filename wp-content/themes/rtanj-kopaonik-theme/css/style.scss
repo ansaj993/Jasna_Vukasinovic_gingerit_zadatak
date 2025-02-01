@@ -1,4 +1,12 @@
-// Base
-@import "base/colors";
-@import "base/typography";
-@import "base/variables";
+//Abstract
+@use "abstract/typography";
+
+//Layout 
+@use "layout/footer";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+

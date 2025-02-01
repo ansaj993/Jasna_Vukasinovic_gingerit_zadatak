@@ -1,0 +1,115 @@
+@use '../base/' as *;
+
+.footer {
+    background-color: $themeBlue;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    color: white;
+    padding: 40px 20px;
+
+    @media screen and (min-width: $large){
+        padding: 60px 60px 50px 60px;
+    }
+
+
+    &__col {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 30px;
+        @media screen and (min-width: $large){
+            width: 25%;
+            text-align: left;
+            padding-bottom: 0,
+        }
+
+        a {
+            color: white;
+        }
+
+        &:nth-of-type(3) {
+            a {
+                padding-bottom: 14px;
+                display: block;
+            }
+        }
+
+        h2 {
+            padding-bottom: 15px;
+        }
+
+        h3 {
+            padding: 20px 0 15px;
+            text-transform: uppercase;
+            font-weight: 700;            
+        }
+
+        li {
+            &:first-of-type {
+                h3 {
+                    padding: 0 0 15px;
+                }
+            }
+        }
+
+        .simple-social-icons {
+            display: flex;
+            justify-content: center;
+            
+            @media screen and (min-width: $large) {
+                justify-content: flex-start;
+            }
+
+            a {
+                padding-left: 0!important;
+            }
+        }
+
+        .icon-widget {
+            display: flex;
+            align-items: baseline;
+            padding-top: 20px;
+            i {
+                padding-left: 0!important;
+            }
+        }
+
+        .custom-logo-link {
+            img {
+                width: 45%;
+
+                @media screen and (min-width: $large){
+                    width: 68%;
+                }
+            }
+        }
+
+        .mc4wp-form-fields {
+            position: relative;
+
+            input {
+                margin-top: 20px;
+                padding: 17px 10px;
+                border-radius: 10px;
+                
+
+                &[type="email"]{
+                    width: 100%;
+                    position: relative;
+                }
+
+                &[type="submit"]{
+                    position: absolute;
+                    top: 1px;
+                    right: 1px;
+                    width: 62px;
+                    height: 62px;
+                    background-color: $themeBrown;
+                    color: white;
+                    border: none;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
