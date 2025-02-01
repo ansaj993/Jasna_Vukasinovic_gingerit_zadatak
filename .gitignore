@@ -14,3 +14,6 @@ wp-config.php
 
 # htaccess
 /.htaccess
+
+# node modules
+/wp-content/themes/rtanj-kopaonik-theme/node_modules
