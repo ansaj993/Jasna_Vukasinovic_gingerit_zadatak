@@ -15,9 +15,26 @@
 <body <?php body_class();?>>
    <header>
         <nav>
-            <?php wp_nav_menu( array(
-                'theme_location' => 'top-menu'
-            ) );?>
+            <?php wp_nav_menu(
+                array(
+                    'container' => 'false',
+                    'theme_location' => 'top-menu'
+                )
+            );
+
+            ?>
         </nav>
-   </header>
+        
+        <?php if(is_front_page()){ ;?>
+            <h1>RANI BOOKING POPUST NA REZERVACIJE!</h1>
+            <p>Rezerviši sada svoj odmor i ostvari 10% popusta! Prepusti se najboljem što ova planina nudi, jer RTANJ JE KOP!</p>
+            
+            <div class="booking-box">
+                <h2>9.1</h2>
+                <p>BOOKING.COM RANKING</p>
+            </div>
+        <?php } else {;?>
+            <h1><?php the_title();?></h1>
+        <?php };?>
+    </header>
     
