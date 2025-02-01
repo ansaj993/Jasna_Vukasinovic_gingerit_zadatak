@@ -1,2 +1,2 @@
-# Jasna Vukasinovic gingerit zadatak
+# Jasna Vukasinovic Gingerit zadatak
 Wordpress theme example
