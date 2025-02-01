@@ -1,1 +1,2 @@
 # Jasna_Vukasinovic_gingerit_zadatak
+Wordpress theme example
