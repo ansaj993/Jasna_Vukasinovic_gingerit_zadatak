@@ -15,14 +15,9 @@
 <body <?php body_class();?>>
    <header>
         <nav>
-            <?php wp_nav_menu(
-                array(
-                    'container' => 'false',
-                    'theme_location' => 'top-menu'
-                )
-            );
-
-            ?>
+            <?php wp_nav_menu( array(
+                'theme_location' => 'top-menu'
+            ));?>
         </nav>
         
         <?php if(is_front_page()){ ;?>
