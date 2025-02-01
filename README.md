@@ -1,2 +1,2 @@
-# Jasna_Vukasinovic_gingerit_zadatak
+# Jasna Vukasinovic gingerit zadatak
 Wordpress theme example
