@@ -14,11 +14,19 @@
 
 <body <?php body_class();?>>
    <header class="header">
+    
         <?php if(is_front_page()){?>
-            <div class="header__image">
+            <div class="header__image--top">
                 <img src="wp-content/themes/rtanj-kopaonik-theme/img/1729073661301344.png" alt="hero-image">
             </div>
         <?php } ?>
+
+        <div class="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
         <nav>
             <?php wp_nav_menu( array(
                 'theme_location' => 'top-menu'
@@ -38,5 +46,9 @@
         <?php } else {;?>
             <h1><?php the_title();?></h1>
         <?php };?>
-    </header>
+
+        <div class="header__image--bottom">
+            <img src="wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="bottom-image">
+        </div>
+</header>
     

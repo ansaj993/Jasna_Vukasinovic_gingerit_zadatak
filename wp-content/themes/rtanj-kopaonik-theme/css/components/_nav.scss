@@ -5,16 +5,18 @@
 nav {
     background-color: $themeBlue;
     z-index: 10;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    display: none;
+    padding: 30px 0;    
 
     @media screen and (min-width: $large) {
         display: block;
         background-color: transparent;
+        padding: 0;
     }
 
     a {
@@ -36,7 +38,7 @@ nav {
         }
 
         @media screen and (min-width: $large) {
-            width: 1300px;
+            max-width: 85%;
             margin: auto;
 
             li {
@@ -49,6 +51,9 @@ nav {
 
             .logo-item {
                 order: 1;
+                a {
+                    padding: 0;
+                }
             }
 
             &-item-half-2 {
