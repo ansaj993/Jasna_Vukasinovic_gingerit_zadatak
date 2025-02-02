@@ -20,18 +20,19 @@ p, h3, li, input {
 
 h1 {
     font-family: $NamdhinggoFontFamily;
-    font-size: 43px;
-    line-height: 91px;
+    font-size: 33px;
+    line-height: 41px;
     margin-bottom: 40px;
 
     @media screen and (min-width:$large) {
         font-size: 63px;
+        line-height: 91px;
     }
 }
 
 h2 {
     font-family: $NamdhinggoFontFamily;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 800;
 
     @media screen and (min-width:$large) {
@@ -48,10 +49,15 @@ h3 {
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 20px;
     font-family: $SegoeFontFamily;
     font-weight: 600;
-    line-height: 45px;
+    line-height: 35px;
+
+    @media screen and (min-width: $large) {
+        font-size: 24px;
+        line-height: 45px;
+    }
 }
 
 h5 {
