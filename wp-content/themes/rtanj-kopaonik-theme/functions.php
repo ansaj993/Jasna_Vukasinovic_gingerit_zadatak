@@ -65,8 +65,8 @@ function rtanjSidebars(){
         array (
             'name' => 'Footer Col 2',
             'id' => 'col-2-sidebar',
-            'before_title' => '<h3 class="widget-title">',
-            'after_title' => '</h3>'
+            'before_title' => '<h6 class="widget-title">',
+            'after_title' => '</h6>'
         )
     );
 
@@ -80,7 +80,9 @@ function rtanjSidebars(){
     register_sidebar (
         array (
             'name' => 'Footer Col 4',
-            'id' => 'col-4-sidebar'
+            'id' => 'col-4-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
         )
     );
 }

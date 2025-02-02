@@ -22,13 +22,25 @@ p, h3, li, input {
 
 h1 {
   font-family: "Namdhinggo", serif;
-  font-size: 80px;
+  font-size: 43px;
   line-height: 91px;
   margin-bottom: 40px;
 }
+@media screen and (min-width: 980px) {
+  h1 {
+    font-size: 63px;
+  }
+}
 
 h2 {
-  font-size: 25px;
+  font-family: "Namdhinggo", serif;
+  font-size: 35px;
+  font-weight: 800;
+}
+@media screen and (min-width: 980px) {
+  h2 {
+    font-size: 55px;
+  }
 }
 
 h3 {
@@ -40,70 +52,51 @@ h3 {
   }
 }
 
+h4 {
+  font-size: 24px;
+  font-family: "Segoe", sans-serif;
+  font-weight: 600;
+  line-height: 45px;
+}
+
+h6 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
 .header {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
-.header .booking-box {
-  position: absolute;
-  top: 5%;
-  left: 0;
+.header__image {
+  width: 100%;
 }
 .header__image img {
   width: 100%;
-  height: auto;
 }
 .header__wrapper {
   position: absolute;
-  top: 45%;
-  width: 100%;
+  top: 40%;
   text-align: center;
   color: white;
-}
-.header nav {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-}
-.header nav a {
-  color: white;
-  font-weight: 700;
-}
-.header nav .menu {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-@media screen and (min-width: 980px) {
-  .header nav .menu {
-    width: 1300px;
-    margin: auto;
-  }
-}
-.header nav .menu .menu-item-half-1 {
-  order: 0;
-}
-.header nav .menu .logo-item {
-  order: 1;
-}
-.header nav .menu .menu-item-half-2 {
-  order: 2;
+  width: 65%;
 }
 
 .footer {
   background-color: #1C4259;
-  display: flex;
-  flex-wrap: wrap;
   list-style-type: none;
   color: white;
-  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 90px;
 }
-@media screen and (min-width: 980px) {
-  .footer {
-    padding: 60px 60px 50px 60px;
-  }
+.footer__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  border-bottom: 2px solid white;
+  padding: 60px 0;
 }
 .footer__col {
   width: 100%;
@@ -127,55 +120,89 @@ h3 {
 .footer__col h2 {
   padding-bottom: 15px;
 }
-.footer__col h3 {
+.footer__col h6 {
   padding: 20px 0 15px;
   text-transform: uppercase;
-  font-weight: 700;
 }
-.footer__col li:first-of-type h3 {
+.footer__col li:first-of-type h6 {
   padding: 0 0 15px;
 }
-.footer__col .simple-social-icons {
-  display: flex;
-  justify-content: center;
+
+nav {
+  background-color: #1C4259;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  display: none;
 }
 @media screen and (min-width: 980px) {
-  .footer__col .simple-social-icons {
-    justify-content: flex-start;
+  nav {
+    display: block;
+    background-color: transparent;
   }
 }
-.footer__col .simple-social-icons a {
-  padding-right: 0 !important;
+nav a {
+  color: white;
+  font-weight: 700;
+  padding: 15px;
+  display: block;
 }
-.footer__col .icon-widget {
+nav .menu {
+  width: 100%;
   display: flex;
-  align-items: baseline;
-  padding-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.footer__col .icon-widget i {
-  padding-right: 0 !important;
-}
-.footer__col .custom-logo-link img {
-  width: 45%;
+nav .menu li {
+  width: 100%;
 }
 @media screen and (min-width: 980px) {
-  .footer__col .custom-logo-link img {
-    width: 68%;
+  nav .menu {
+    width: 1300px;
+    margin: auto;
+  }
+  nav .menu li {
+    width: auto;
+  }
+  nav .menu-item-half-1 {
+    order: 0;
+  }
+  nav .menu .logo-item {
+    order: 1;
+  }
+  nav .menu-item-half-2 {
+    order: 2;
   }
 }
-.footer__col .mc4wp-form-fields {
+
+.booking-box {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  text-align: center;
+  padding: 15px 10px 10px;
+  background-color: white;
+  color: #1C4259;
+  border-radius: 0 15px 15px 0;
+}
+
+.mc4wp-form-fields {
   position: relative;
 }
-.footer__col .mc4wp-form-fields input {
+.mc4wp-form-fields input {
   margin-top: 20px;
   padding: 17px 10px;
   border-radius: 10px;
 }
-.footer__col .mc4wp-form-fields input[type=email] {
+.mc4wp-form-fields input[type=email] {
   width: 100%;
   position: relative;
 }
-.footer__col .mc4wp-form-fields input[type=submit] {
+.mc4wp-form-fields input[type=submit] {
   position: absolute;
   top: 1px;
   left: 1px;
@@ -185,6 +212,46 @@ h3 {
   color: white;
   border: none;
   font-size: 25px;
+}
+
+.simple-social-icons {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 980px) {
+  .simple-social-icons {
+    justify-content: flex-start;
+  }
+}
+.simple-social-icons a {
+  padding-right: 0 !important;
+}
+
+.icon-widget {
+  display: flex;
+  align-items: baseline;
+  padding-top: 20px;
+}
+.icon-widget i {
+  padding-right: 0 !important;
+}
+.icon-widget h4 {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.custom-logo-link img {
+  width: 45%;
+}
+@media screen and (min-width: 980px) {
+  .custom-logo-link img {
+    width: 68%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .custom-logo-link img {
+    width: 45%;
+  }
 }
 
 * {

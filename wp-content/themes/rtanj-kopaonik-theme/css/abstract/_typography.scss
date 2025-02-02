@@ -20,13 +20,23 @@ p, h3, li, input {
 
 h1 {
     font-family: $NamdhinggoFontFamily;
-    font-size: 80px;
+    font-size: 43px;
     line-height: 91px;
     margin-bottom: 40px;
+
+    @media screen and (min-width:$large) {
+        font-size: 63px;
+    }
 }
 
 h2 {
-    font-size: 25px;
+    font-family: $NamdhinggoFontFamily;
+    font-size: 35px;
+    font-weight: 800;
+
+    @media screen and (min-width:$large) {
+        font-size: 55px;
+    }
 }
 
 h3 {
@@ -35,4 +45,20 @@ h3 {
     @media screen and (min-width: $large) {
         font-size: 19px;
     }
+}
+
+h4 {
+    font-size: 24px;
+    font-family: $SegoeFontFamily;
+    font-weight: 600;
+    line-height: 45px;
+}
+
+h5 {
+
+}
+
+h6 {
+    font-size: 18px;
+    text-transform: uppercase;
 }

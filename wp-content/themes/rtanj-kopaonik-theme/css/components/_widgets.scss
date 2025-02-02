@@ -1,0 +1,43 @@
+// Footer widgets
+@use '../base/' as *;
+
+.simple-social-icons {
+    display: flex;
+    justify-content: center;
+    
+    @media screen and (min-width: $large) {
+        justify-content: flex-start;
+    }
+
+    a {
+        padding-left: 0!important;
+    }
+}
+
+.icon-widget {
+    display: flex;
+    align-items: baseline;
+    padding-top: 20px;
+    i {
+        padding-left: 0!important;
+    }
+
+    h4 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+.custom-logo-link {
+    img {
+        width: 45%;
+
+        @media screen and (min-width: $large){
+            width: 68%;
+        }
+
+        @media screen and (min-width: $xlarge){
+            width: 45%;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+// Navigation menu
+
+@use '../base/' as *;
+
+nav {
+    background-color: $themeBlue;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+
+    @media screen and (min-width: $large) {
+        display: block;
+        background-color: transparent;
+    }
+
+    a {
+        color: white;
+        font-weight: 700;
+        padding: 15px;
+        display: block;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            width: 100%;
+        }
+
+        @media screen and (min-width: $large) {
+            width: 1300px;
+            margin: auto;
+
+            li {
+                width: auto;
+            }
+            
+            &-item-half-1 {
+                order: 0;
+            }
+
+            .logo-item {
+                order: 1;
+            }
+
+            &-item-half-2 {
+                order: 2;
+            }
+        }
+
+    }
+
+}

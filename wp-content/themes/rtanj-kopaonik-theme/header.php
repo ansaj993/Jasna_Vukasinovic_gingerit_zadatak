@@ -28,12 +28,12 @@
         <?php if(is_front_page()){ ;?>
             <div class="header__wrapper">
                 <h1>Rani booking popust na rezervacije!</h1>
-                <h3>Rezerviši sada svoj odmor i ostvari 10% popusta! Prepusti se najboljem što ova planina nudi, jer RTANJ JE KOP!</h3>
-                
-                <div class="booking-box">
-                    <h2>9.1</h2>
-                    <p>BOOKING.COM RANKING</p>
-                </div>
+                <h4>Rezerviši sada svoj odmor i ostvari 10% popusta! Prepusti se najboljem što ova planina nudi, jer RTANJ JE KOP!</h4> 
+            </div>
+
+            <div class="booking-box">
+                <h2>9.1</h2>
+                <p>booking.com ranking</p>
             </div>
         <?php } else {;?>
             <h1><?php the_title();?></h1>

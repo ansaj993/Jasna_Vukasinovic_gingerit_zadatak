@@ -5,6 +5,13 @@
 @use "layout/header";
 @use "layout/footer";
 
+// Components 
+@use "components/nav";
+@use "components/booking-box";
+@use "components/mailchimp";
+@use "components/widgets";
+
+
 * {
     margin: 0;
     padding: 0;
