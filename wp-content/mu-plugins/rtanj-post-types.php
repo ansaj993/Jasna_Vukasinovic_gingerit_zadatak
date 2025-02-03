@@ -1,13 +1,14 @@
 <?php
 function rtanj_post_types(){
 
-     // Specijalne ponude Post Type
+    // Specijalne ponude Post Type
 
-     register_post_type('specijalne-ponude', array(
-        'supports' => array('title'),
+    register_post_type('specijalne-ponude', array(
+        'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'specijalne-ponude'),
         'has_archive' => true,
         'public' => true,
+        'show_in_rest' => true,
         'labels' => array(
             'name' => 'Specijalne ponude',
             'singular_name' => 'Specijalna ponuda',
@@ -28,10 +29,11 @@ function rtanj_post_types(){
     // Aktivnosti Post Type
 
     register_post_type('aktivnosti', array(
-        'supports' => array('title'),
+        'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'aktivnosti'),
         'has_archive' => true,
         'public' => true,
+        'show_in_rest' => true,
         'labels' => array(
             'name' => 'Aktivnosti',
             'singular_name' => 'Aktivnost',
@@ -52,10 +54,11 @@ function rtanj_post_types(){
     // Sadrzaj Post Type
 
     register_post_type('sadrzaj', array(
-        'supports' => array('title'),
+        'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'sadrzaji'),
         'has_archive' => true,
         'public' => true,
+        'show_in_rest' => true,
         'labels' => array(
             'name' => 'Sadržaj',
             'singular_name' => 'Sadržaj',
@@ -76,10 +79,11 @@ function rtanj_post_types(){
     // Galerija Post Type
 
     register_post_type('galerija', array(
-        'supports' => array('title'),
+        'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'galerija'),
         'has_archive' => true,
         'public' => true,
+        'show_in_rest' => true,
         'labels' => array(
             'name' => 'Galerije',
             'singular_name' => 'Galerija',

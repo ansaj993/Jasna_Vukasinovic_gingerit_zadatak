@@ -18,11 +18,13 @@ function rtanj_scripts(){
 add_action('after_setup_theme', 'rtanjSetup');
 
 function rtanjSetup(){
+
     // Theme support
     
     add_theme_support('menus');
     add_theme_support('custom-logo');
     add_theme_support('widgets');
+    add_theme_support('post-thumbnails');
 
     // Menus 
 

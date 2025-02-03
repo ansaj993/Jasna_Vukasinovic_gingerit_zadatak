@@ -277,13 +277,14 @@ nav .menu li {
 .mc4wp-form-fields input[type=email] {
   width: 100%;
   position: relative;
+  border: none;
 }
 .mc4wp-form-fields input[type=submit] {
   position: absolute;
-  top: 1px;
-  right: 1px;
+  top: 0px;
+  right: 0px;
   width: 62px;
-  height: 62px;
+  height: 61px;
   background-color: #CBAF96;
   color: white;
   border: none;
