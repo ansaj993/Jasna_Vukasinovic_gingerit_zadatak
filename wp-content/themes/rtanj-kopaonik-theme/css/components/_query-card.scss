@@ -1,0 +1,59 @@
+// Card in query
+
+.card {
+    width: 33%;
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 43px 73px 43px 43px;
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        color: white;
+        width: 100%;
+
+        p {
+            padding-top: 10px;
+        }
+
+        a {
+            display: block;
+            margin: 22px 0;
+            color: white;
+            font-weight: 700;
+        }
+    }
+
+    &:nth-of-type(2){
+        margin: 0 34px;
+    }
+
+    &--bordered {
+        height: 605px;
+
+        .content {
+            padding: 40px;
+        }
+    }
+
+    &--scaled {
+        height: 450px;
+
+        .content {
+            padding: 23px;
+        }
+    }
+
+}

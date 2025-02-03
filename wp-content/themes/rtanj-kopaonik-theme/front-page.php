@@ -1,11 +1,13 @@
 <?php get_header();?>
 
 <main>
-    <section class="offers">
-        <h6>NAJBOLJE CENE</h6>
-        <h4>Specijalne ponude</h4>
+    <section class="section">
+        <div class="section__content">
+            <h6>NAJBOLJE CENE</h6>
+            <h3>Specijalne ponude</h3>
+        </div>
 
-        <div class="query-wrap offers__wrap">
+        <div class="section__query section__query--fullwidth">
             <?php 
                 $offers = new WP_Query(array(
                     'post_type' => 'specijalne-ponude',
@@ -18,22 +20,30 @@
                         $offers->the_post();
                         ?>
                         
-                        <img src="<?php echo get_the_post_thumbnail_url();?>">
-                        <h5><?php the_title();?></h5>
-                        <p><?php the_excerpt();?></p>
-                        <a href="<?php echo get_the_permalink()?>">Detaljnije</a>
+                        <div class="card card--scaled">
+                            <img src="<?php echo get_the_post_thumbnail_url();?>" class="card__image">
+                            <div class="content card__content">
+                                <h5><?php the_title();?></h5>
+                                <?php the_excerpt();?>
+                                <a href="<?php echo get_the_permalink()?>">Detaljnije</a>
+                            </div>
+                        </div>
                     <?php }
                 }
             ;?>
         </div>
+
+        <a href="" class="section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="activities">
-        <h6>SAMO ZA NAJHRABRIJE</h6>
-        <h4>Avanture na Kopu</h4>
-        <p>Pobedi strahove i osvoji vrhove! Čekamo te na najlepšoj srpskoj planini, sa aktivnostima koje će razbuditi svaki atom tvog tela.</p>
+    <section class="section">
+        <div class="section__content">
+            <h6>SAMO ZA NAJHRABRIJE</h6>
+            <h3>Avanture na Kopu</h3>
+            <p>Pobedi strahove i osvoji vrhove! Čekamo te na najlepšoj srpskoj planini, sa aktivnostima koje će razbuditi svaki atom tvog tela.</p>
+        </div>
 
-        <div class="query-wrap activities__wrap">
+        <div class="section__query section__query--nofullwidth">
             <?php 
                 $activities = new WP_Query(array(
                     'post_type' => 'aktivnosti',
@@ -45,20 +55,27 @@
                     while($activities->have_posts()){
                         $activities->the_post();
                         ?>
-                        <img src="<?php echo get_the_post_thumbnail_url();?>">
-                        <h5><?php the_title();?></h5>
+
+                        <div class="card card--bordered">
+                            <img src="<?php echo get_the_post_thumbnail_url();?>" class="card__image">
+                            <h5 class="content card__content"><?php the_title();?></h5>
+                        </div>
                     <?php }
                 }
             ;?>
         </div>
+
+        <a href="" class="section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="contents">
-        <h6>ZA NAJVEĆE HEDONISTE</h6>
-        <h4>Sadržaj</h4>
-        <p>Nakon što osvojiš vrhove, vreme je za opuštanje. Izaberi svoje zadovoljstvo.</p>
-
-        <div class="query-wrap activities__wrap">
+    <section class="section">
+        <div class="section__content">
+            <h6>ZA NAJVEĆE HEDONISTE</h6>
+            <h3>Sadržaj</h3>
+            <p>Nakon što osvojiš vrhove, vreme je za opuštanje. Izaberi svoje zadovoljstvo.</p>
+        </div>
+      
+        <div class="section__query section__query--nofullwidth">
             <?php 
                 $contents = new WP_Query(array(
                     'post_type' => 'sadrzaj',
@@ -70,19 +87,26 @@
                     while($contents->have_posts()){
                         $contents->the_post();
                         ?>
-                        <img src="<?php echo get_the_post_thumbnail_url();?>">
-                        <h5><?php the_title();?></h5>
+
+                        <div class="card card--bordered">
+                            <img src="<?php echo get_the_post_thumbnail_url();?>" class="card__image">
+                            <h5 class="content card__content"><?php the_title();?></h5>
+                        </div>
                     <?php }
                 }
             ;?>
         </div>
+
+        <a href="" class="section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="blog">
-        <h6>Blog</h6>
-        <h4>Budi u toku sa dešavanjima na Kopu</h4>
+    <section class="section">
+        <div class="section__content">
+            <h6>Blog</h6>
+            <h3>Budi u toku sa dešavanjima na Kopu</h3>
+        </div>
 
-        <div class="query-wrap activities__wrap">
+        <div class="section__query section__query--fullwidth">
             <?php 
                 $blog = new WP_Query(array(
                     'post_type' => 'post',
@@ -94,15 +118,21 @@
                     while($blog->have_posts()){
                         $blog->the_post();
                         ?>
-                        
-                        <img src="<?php echo get_the_post_thumbnail_url();?>">
-                        <h5><?php the_title();?></h5>
-                        <p><?php the_excerpt();?></p>
-                        <a href="<?php echo get_the_permalink()?>">Detaljnije</a>
+
+                        <div class="card card--scaled">
+                            <img src="<?php echo get_the_post_thumbnail_url();?>" class="card__image">
+                            <div class="content card__content">
+                                <h5><?php the_title();?></h5>
+                                <?php the_excerpt();?>
+                                <a href="<?php echo get_the_permalink()?>">Detaljnije</a>
+                            </div>
+                        </div>
                     <?php }
                 }
             ;?>
         </div>
+
+        <a href="" class="section__button">Pogledaj ponudu</a>
     </section>
 </main>
 

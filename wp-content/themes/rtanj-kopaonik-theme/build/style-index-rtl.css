@@ -4,18 +4,19 @@
 li {
   list-style-type: none;
 }
-li a {
+
+a {
   text-decoration: none;
 }
 
-p, h3, li, input {
+p, h3, li, input, a {
   font-family: "Segoe", sans-serif;
   font-size: 15px;
   line-height: 27px;
   font-weight: 400;
 }
 @media screen and (min-width: 980px) {
-  p, h3, li, input {
+  p, h3, li, input, a {
     font-size: 17px;
   }
 }
@@ -51,11 +52,15 @@ h2 {
 }
 
 h3 {
-  font-size: 17px;
+  font-size: 25px;
+  font-family: "Namdhinggo", serif;
+  font-weight: 700;
+  color: #1C4259;
+  text-align: center;
 }
 @media screen and (min-width: 980px) {
   h3 {
-    font-size: 19px;
+    font-size: 40px;
   }
 }
 
@@ -77,9 +82,16 @@ h4 {
   }
 }
 
+h5 {
+  font-family: "Segoe", sans-serif;
+  font-size: 22px;
+}
+
 h6 {
+  font-family: "Segoe", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .header {
@@ -181,6 +193,44 @@ h6 {
   .footer .custom-logo-link img {
     width: 45%;
   }
+}
+
+.section {
+  text-align: center;
+}
+.section__content {
+  padding: 30px 0 60px 0;
+  width: 42%;
+  margin: auto;
+}
+.section__content h6 {
+  color: #CBAF96;
+  padding-bottom: 25px;
+}
+.section__content p {
+  padding-top: 30px;
+}
+.section__query {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+}
+.section__query--nofullwidth {
+  width: 90%;
+  margin: auto;
+}
+.section__button {
+  display: inline-block;
+  color: #CBAF96;
+  padding: 25px 35px;
+  border: 1px solid #CBAF96;
+  border-radius: 10px;
+  transition: all 0.5s ease-in-out;
+  margin: 50px 0;
+}
+.section__button:hover {
+  background-color: #CBAF96;
+  color: white;
 }
 
 nav {
@@ -349,6 +399,55 @@ nav .menu li {
 }
 .menu-icon .active .bar:last-of-type {
   transform: rotateX(-45deg);
+}
+
+.card {
+  width: 33%;
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  padding: 43px 43px 43px 73px;
+}
+.card__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+  color: white;
+  width: 100%;
+}
+.card__content p {
+  padding-top: 10px;
+}
+.card__content a {
+  display: block;
+  margin: 22px 0;
+  color: white;
+  font-weight: 700;
+}
+.card:nth-of-type(2) {
+  margin: 0 34px;
+}
+.card--bordered {
+  height: 605px;
+}
+.card--bordered .content {
+  padding: 40px;
+}
+.card--scaled {
+  height: 450px;
+}
+.card--scaled .content {
+  padding: 23px;
 }
 
 * {

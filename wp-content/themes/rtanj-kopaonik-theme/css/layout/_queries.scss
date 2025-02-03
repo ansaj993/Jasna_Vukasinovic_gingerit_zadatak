@@ -1,0 +1,45 @@
+// Query block
+
+@use '../base/' as *;
+
+.section {
+    text-align: center;
+
+    &__content {
+        padding: 30px 0 60px 0;
+        width: 42%;
+        margin: auto;
+        h6 {
+            color: $themeBrown;
+            padding-bottom: 25px;
+        }
+
+        p {
+            padding-top: 30px;
+        }
+    }
+
+    &__query {
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        &--nofullwidth {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    &__button {
+        display: inline-block;
+        color: $themeBrown;
+        padding: 25px 35px;
+        border: 1px solid $themeBrown;
+        border-radius: 10px;
+        transition: all .5s ease-in-out;
+        margin: 50px 0;
+        &:hover {
+            background-color: $themeBrown;
+            color: white;
+        }
+    }
+}

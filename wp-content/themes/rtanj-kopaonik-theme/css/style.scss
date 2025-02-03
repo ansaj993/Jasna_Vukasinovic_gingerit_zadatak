@@ -4,6 +4,7 @@
 //Layout 
 @use "layout/header";
 @use "layout/footer";
+@use "layout/queries";
 
 // Components 
 @use "components/nav";
@@ -11,6 +12,7 @@
 @use "components/mailchimp";
 @use "components/widgets";
 @use "components/menu-icon";
+@use "components/query-card";
 
 * {
     margin: 0;
