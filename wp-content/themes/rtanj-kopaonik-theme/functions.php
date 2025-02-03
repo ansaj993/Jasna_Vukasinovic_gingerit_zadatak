@@ -10,7 +10,7 @@ function rtanj_scripts(){
     wp_enqueue_style('namdhinggo-font', 'https://fonts.googleapis.com/css2?family=Namdhinggo:wght@400;500;600;700;800&display=swap');
     wp_enqueue_style('segoe-font', 'https://fonts.cdnfonts.com/css/segoe-ui-4');    
 
-
+    wp_enqueue_script('my-script-rtanj', get_theme_file_uri('/build/index.js'), null, '1.0', true);
 }
 
 // Menus and support

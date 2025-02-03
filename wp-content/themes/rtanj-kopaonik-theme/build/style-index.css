@@ -67,6 +67,11 @@ h4 {
 }
 @media screen and (min-width: 980px) {
   h4 {
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  h4 {
     font-size: 24px;
     line-height: 45px;
   }
@@ -164,6 +169,19 @@ h6 {
 .footer__col li:first-of-type h6 {
   padding: 0 0 15px;
 }
+.footer .custom-logo-link img {
+  width: 45%;
+}
+@media screen and (min-width: 980px) {
+  .footer .custom-logo-link img {
+    width: 68%;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .footer .custom-logo-link img {
+    width: 45%;
+  }
+}
 
 nav {
   background-color: #1C4259;
@@ -223,7 +241,7 @@ nav .menu li {
 
 .booking-box {
   position: absolute;
-  top: 20%;
+  top: 13%;
   right: 0;
   text-align: center;
   padding: 15px 10px 10px;
@@ -302,20 +320,6 @@ nav .menu li {
 .icon-widget h4 {
   font-size: 18px;
   line-height: 30px;
-}
-
-.custom-logo-link img {
-  width: 45%;
-}
-@media screen and (min-width: 980px) {
-  .custom-logo-link img {
-    width: 68%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .custom-logo-link img {
-    width: 45%;
-  }
 }
 
 .menu-icon {

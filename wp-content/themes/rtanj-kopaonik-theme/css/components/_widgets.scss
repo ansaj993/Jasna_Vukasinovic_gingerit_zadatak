@@ -34,16 +34,4 @@
     }
 }
 
-.custom-logo-link {
-    img {
-        width: 45%;
 
-        @media screen and (min-width: $large){
-            width: 68%;
-        }
-
-        @media screen and (min-width: $xlarge){
-            width: 45%;
-        }
-    }
-}
