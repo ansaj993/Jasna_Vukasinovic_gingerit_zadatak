@@ -4,6 +4,7 @@
 
 .section {
     text-align: center;
+    padding: 50px 0;
 
     &__content {
         padding: 30px 0 60px 0;
@@ -23,20 +24,24 @@
         display: flex;
         justify-content: space-between;
         text-align: left;
+       
         &--nofullwidth {
-            width: 90%;
-            margin: auto;
+            width: 95%;
+            margin: 0 auto 100px;
+        }
+
+        &--fullwidth {
+            margin-bottom: 50px;
         }
     }
 
     &__button {
         display: inline-block;
         color: $themeBrown;
-        padding: 25px 35px;
+        padding: 20px 35px;
         border: 1px solid $themeBrown;
         border-radius: 10px;
         transition: all .5s ease-in-out;
-        margin: 50px 0;
         &:hover {
             background-color: $themeBrown;
             color: white;

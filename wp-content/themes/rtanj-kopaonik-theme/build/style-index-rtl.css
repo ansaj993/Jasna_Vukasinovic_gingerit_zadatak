@@ -197,6 +197,7 @@ h6 {
 
 .section {
   text-align: center;
+  padding: 50px 0;
 }
 .section__content {
   padding: 30px 0 60px 0;
@@ -216,17 +217,19 @@ h6 {
   text-align: right;
 }
 .section__query--nofullwidth {
-  width: 90%;
-  margin: auto;
+  width: 95%;
+  margin: 0 auto 100px;
+}
+.section__query--fullwidth {
+  margin-bottom: 50px;
 }
 .section__button {
   display: inline-block;
   color: #CBAF96;
-  padding: 25px 35px;
+  padding: 20px 35px;
   border: 1px solid #CBAF96;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
-  margin: 50px 0;
 }
 .section__button:hover {
   background-color: #CBAF96;
@@ -404,8 +407,6 @@ nav .menu li {
 .card {
   width: 33%;
   position: relative;
-  border-radius: 24px;
-  overflow: hidden;
   padding: 43px 43px 43px 73px;
 }
 .card__image {
@@ -434,20 +435,44 @@ nav .menu li {
   color: white;
   font-weight: 700;
 }
-.card:nth-of-type(2) {
-  margin: 0 34px;
-}
 .card--bordered {
   height: 605px;
+}
+.card--bordered img {
+  border-radius: 20px;
 }
 .card--bordered .content {
   padding: 40px;
 }
+.card--bordered::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #CBAF96;
+  border-radius: 20px;
+}
+.card--bordered:nth-of-type(2) {
+  margin: 0 55px;
+  transform: translateY(65px);
+}
+.card--bordered:nth-of-type(2)::after {
+  top: -22px;
+  right: 22px;
+}
 .card--scaled {
   height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
 }
 .card--scaled .content {
   padding: 23px;
+}
+.card--scaled:nth-of-type(2) {
+  margin: 0 34px;
 }
 
 * {

@@ -33,7 +33,7 @@
             ;?>
         </div>
 
-        <a href="" class="section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -65,7 +65,7 @@
             ;?>
         </div>
 
-        <a href="" class="section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -97,7 +97,7 @@
             ;?>
         </div>
 
-        <a href="" class="section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -132,7 +132,7 @@
             ;?>
         </div>
 
-        <a href="" class="section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 </main>
 
