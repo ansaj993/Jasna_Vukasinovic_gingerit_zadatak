@@ -1,4 +1,4 @@
-        <footer class="footer">
+        <footer class="footer section--dark">
             <div class="footer__wrap">
                 <div class="footer__col">
                     <?php the_custom_logo();?>

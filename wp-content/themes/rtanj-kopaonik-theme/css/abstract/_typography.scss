@@ -52,7 +52,6 @@ h3 {
     font-size: 25px;
     font-family: $titleFont;
     font-weight: 700;
-    color: $themeBlue;
     text-align: center;
 
     @media screen and (min-width: $large) {
@@ -86,5 +85,4 @@ h6 {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
-    color: $themeBrown;
 }

@@ -32,23 +32,6 @@
             margin: 22px 0;
             font-weight: 700;
         }
-
-        &--light {
-            color: white;
-            a {
-                color: white;
-            }
-        }
-
-        &--dark {
-            .title {
-                color: $themeBlue;
-            }
-
-            p {
-                color: black;
-            }
-        }
     }
 
     &--bordered {

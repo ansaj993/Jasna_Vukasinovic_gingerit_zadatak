@@ -55,7 +55,6 @@ h3 {
   font-size: 25px;
   font-family: "Namdhinggo", serif;
   font-weight: 700;
-  color: #1C4259;
   text-align: center;
 }
 @media screen and (min-width: 980px) {
@@ -92,7 +91,6 @@ h6 {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
-  color: #CBAF96;
 }
 
 .header {
@@ -141,7 +139,6 @@ h6 {
 }
 
 .footer {
-  background-color: #1C4259;
   list-style-type: none;
   color: white;
   display: flex;
@@ -198,13 +195,34 @@ h6 {
   }
 }
 
+.query {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.query--fullwidth {
+  margin-bottom: 50px;
+}
+.query--nofullwidth {
+  width: 95%;
+  margin: 0 auto 100px;
+}
+.query--faq {
+  display: block;
+  width: 85%;
+  margin: 0 auto 50px;
+}
+
 .section {
   text-align: center;
-  padding: 80px 0;
+  padding-bottom: 70px;
+}
+.section--dark {
+  background-color: #1C4259;
 }
 .section__content {
   padding: 30px 0 60px 0;
-  width: 42%;
+  width: 50%;
   margin: auto;
 }
 .section__content h6 {
@@ -213,33 +231,22 @@ h6 {
 .section__content p {
   padding-top: 30px;
 }
-.section .query {
-  display: flex;
-  justify-content: space-between;
-  text-align: left;
-}
-.section .query--nofullwidth {
-  width: 95%;
-  margin: 0 auto 100px;
-}
-.section .query--fullwidth {
-  margin-bottom: 50px;
-}
-.section .query--faq {
-  display: block;
-  width: 85%;
-  margin: 0 auto 50px;
-}
-.section .query__content--light {
+.section__content--light {
   color: white;
 }
-.section .query__content--light a {
+.section__content--light .subtitle {
+  color: #CBAF96;
+}
+.section__content--light a {
   color: white;
 }
-.section .query__content--dark .title {
+.section__content--dark .subtitle {
+  color: #CBAF96;
+}
+.section__content--dark .title {
   color: #1C4259;
 }
-.section .query__content--dark p {
+.section__content--dark p {
   color: black;
 }
 .section__button {
@@ -253,6 +260,40 @@ h6 {
 .section__button:hover {
   background-color: #CBAF96;
   color: white;
+}
+
+.about__top {
+  position: relative;
+}
+.about__top img {
+  width: 100%;
+  height: auto;
+}
+.about .images {
+  width: 85%;
+  margin: 0 auto 150px;
+  display: flex;
+}
+.about .images__item {
+  width: 58%;
+  height: 385px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+}
+.about .images__item:first-of-type {
+  left: 5%;
+}
+.about .images__item:last-of-type {
+  top: 140px;
+  left: -5%;
+}
+.about .images__item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140%;
 }
 
 nav {
@@ -450,18 +491,6 @@ nav .menu li {
   display: block;
   margin: 22px 0;
   font-weight: 700;
-}
-.card__content--light {
-  color: white;
-}
-.card__content--light a {
-  color: white;
-}
-.card__content--dark .title {
-  color: #1C4259;
-}
-.card__content--dark p {
-  color: black;
 }
 .card--bordered {
   height: 605px;

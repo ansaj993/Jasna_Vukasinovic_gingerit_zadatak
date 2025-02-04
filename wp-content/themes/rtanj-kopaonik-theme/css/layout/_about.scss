@@ -1,0 +1,41 @@
+// About section
+
+@use '../base/' as *;
+
+.about {
+    &__top {
+        position: relative;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .images {
+        width: $width85;
+        margin: 0 auto 150px;
+        display: flex;
+        &__item {
+            width: 58%;
+            height: 385px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 20px;
+            &:first-of-type {
+                left: 5%;
+            }
+
+            &:last-of-type {
+                top: 140px;
+                left: -5%;
+            }
+
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 140%;
+            }
+        }
+    }
+}

@@ -38,7 +38,7 @@ nav {
         }
 
         @media screen and (min-width: $large) {
-            max-width: 85%;
+            max-width: $width85;
             margin: auto;
 
             li {
