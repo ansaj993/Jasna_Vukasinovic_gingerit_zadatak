@@ -100,6 +100,57 @@ function rtanj_post_types(){
         ),
         'menu_icon' => 'dashicons-format-gallery',
     ));
+
+    // Iskustva Post Type
+
+    register_post_type('iskustva', array(
+        'supports' => array('title', 'editor'),
+        'rewrite' => array('slug' => 'iskustva'),
+        'has_archive' => false,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Iskustva',
+            'singular_name' => 'Iskustvo',
+            'add_new' => 'Dodaj novo',
+            'add_new_item' => 'Dodaj novo iskustvo',
+            'new_item' => 'Novo iskustvo',
+            'view_item' => 'Vidi iskustvo',
+            'view_items' => 'Vidi iskustva',
+            'edit_item' => 'Izmeni iskustva',
+            'all_items' => 'Sva iskustva',
+            'search_items' => 'Pretraži iskustva',
+            'not_found' => 'Nema pronadjenih iskustava',
+            'not_found_in_trash' => 'Nema iskustava pronadjenih u otpadu',
+        ),
+        'menu_icon' => 'dashicons-star-filled',
+    ));
+
+     // Česta Pitanja Post Type
+
+     register_post_type('cesta-pitanja', array(
+        'supports' => array('title', 'editor'),
+        'rewrite' => array('slug' => 'cesta-pitanja'),
+        'has_archive' => false,
+        'public' => true,
+        'show_in_rest' => true,
+        'labels' => array(
+            'name' => 'Česta Pitanja',
+            'singular_name' => 'Često Pitanje',
+            'add_new' => 'Dodaj novo',
+            'add_new_item' => 'Dodaj novo pitanje',
+            'new_item' => 'Novo pitanje',
+            'view_item' => 'Vidi pitanje',
+            'view_items' => 'Vidi pitanja',
+            'edit_item' => 'Izmeni pitanja',
+            'all_items' => 'Sva pitanja',
+            'search_items' => 'Pretraži pitanja',
+            'not_found' => 'Nema pronadjenih pitanja',
+            'not_found_in_trash' => 'Nema pitanja pronadjenih u otpadu',
+        ),
+        'menu_icon' => 'dashicons-groups',
+    ));
+
 }
 
 add_action('init', 'rtanj_post_types');

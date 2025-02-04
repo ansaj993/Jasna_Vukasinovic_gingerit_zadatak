@@ -39,12 +39,15 @@
         position: absolute;
         top: 30%;
         text-align: center;
-        color: white;
         width: 95%;
 
         @media screen and (min-width: $large) {
             width: 70%;
             top: 35%;
+        }
+
+        &--light {
+            color: white;
         }
     }
 }

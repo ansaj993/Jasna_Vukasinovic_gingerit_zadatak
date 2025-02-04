@@ -4,14 +4,13 @@
 
 .section {
     text-align: center;
-    padding: 50px 0;
+    padding: 80px 0;
 
     &__content {
         padding: 30px 0 60px 0;
         width: 42%;
         margin: auto;
         h6 {
-            color: $themeBrown;
             padding-bottom: 25px;
         }
 
@@ -20,7 +19,7 @@
         }
     }
 
-    &__query {
+    .query {
         display: flex;
         justify-content: space-between;
         text-align: left;
@@ -32,6 +31,31 @@
 
         &--fullwidth {
             margin-bottom: 50px;
+        }
+
+        &--faq {
+            display: block;
+            width: 85%;
+            margin: 0 auto 50px;
+        }
+
+        &__content {
+            &--light {
+                color: white;
+                a {
+                    color: white;
+                }
+            }
+    
+            &--dark {
+                .title {
+                    color: $themeBlue;
+                }
+    
+                p {
+                    color: black;
+                }
+            }
         }
     }
 

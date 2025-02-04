@@ -34,7 +34,7 @@
         </nav>
         
         <?php if(is_front_page()){ ;?>
-            <div class="header__wrapper">
+            <div class="header__wrapper header__wrapper--light">
                 <h1>Rani booking popust na rezervacije!</h1>
                 <h4>Rezerviši sada svoj odmor i ostvari 10% popusta! Prepusti se najboljem što ova planina nudi, jer RTANJ JE KOP!</h4> 
             </div>

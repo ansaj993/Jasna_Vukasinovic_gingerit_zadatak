@@ -1,0 +1,15 @@
+//FAQ
+
+@use '../base/' as *;
+
+.faq {
+    padding: 20px;
+    border-bottom: 1px solid $themeBlue;
+    &:first-of-type {
+        border-top: 1px solid $themeBlue;
+    }
+
+    p {
+        padding-top: 20px;
+    }
+}

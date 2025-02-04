@@ -84,7 +84,7 @@ h4 {
 
 h5 {
   font-family: "Segoe", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 h6 {
@@ -92,6 +92,7 @@ h6 {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
+  color: #CBAF96;
 }
 
 .header {
@@ -127,7 +128,6 @@ h6 {
   position: absolute;
   top: 30%;
   text-align: center;
-  color: white;
   width: 95%;
 }
 @media screen and (min-width: 980px) {
@@ -135,6 +135,9 @@ h6 {
     width: 70%;
     top: 35%;
   }
+}
+.header__wrapper--light {
+  color: white;
 }
 
 .footer {
@@ -164,7 +167,7 @@ h6 {
     padding-bottom: 0;
   }
 }
-.footer__col a {
+.footer__col h6, .footer__col a {
   color: white;
 }
 .footer__col:nth-of-type(3) a {
@@ -197,7 +200,7 @@ h6 {
 
 .section {
   text-align: center;
-  padding: 50px 0;
+  padding: 80px 0;
 }
 .section__content {
   padding: 30px 0 60px 0;
@@ -205,23 +208,39 @@ h6 {
   margin: auto;
 }
 .section__content h6 {
-  color: #CBAF96;
   padding-bottom: 25px;
 }
 .section__content p {
   padding-top: 30px;
 }
-.section__query {
+.section .query {
   display: flex;
   justify-content: space-between;
   text-align: right;
 }
-.section__query--nofullwidth {
+.section .query--nofullwidth {
   width: 95%;
   margin: 0 auto 100px;
 }
-.section__query--fullwidth {
+.section .query--fullwidth {
   margin-bottom: 50px;
+}
+.section .query--faq {
+  display: block;
+  width: 85%;
+  margin: 0 auto 50px;
+}
+.section .query__content--light {
+  color: white;
+}
+.section .query__content--light a {
+  color: white;
+}
+.section .query__content--dark .title {
+  color: #1C4259;
+}
+.section .query__content--dark p {
+  color: black;
 }
 .section__button {
   display: inline-block;
@@ -299,7 +318,6 @@ nav .menu li {
   text-align: center;
   padding: 15px 10px 10px;
   background-color: white;
-  color: #1C4259;
   border-radius: 0 15px 15px 0;
   width: 35%;
 }
@@ -423,7 +441,6 @@ nav .menu li {
   bottom: 0;
   right: 0;
   z-index: 10;
-  color: white;
   width: 100%;
 }
 .card__content p {
@@ -432,8 +449,19 @@ nav .menu li {
 .card__content a {
   display: block;
   margin: 22px 0;
-  color: white;
   font-weight: 700;
+}
+.card__content--light {
+  color: white;
+}
+.card__content--light a {
+  color: white;
+}
+.card__content--dark .title {
+  color: #1C4259;
+}
+.card__content--dark p {
+  color: black;
 }
 .card--bordered {
   height: 605px;
@@ -473,6 +501,17 @@ nav .menu li {
 }
 .card--scaled:nth-of-type(2) {
   margin: 0 34px;
+}
+
+.faq {
+  padding: 20px;
+  border-bottom: 1px solid #1C4259;
+}
+.faq:first-of-type {
+  border-top: 1px solid #1C4259;
+}
+.faq p {
+  padding-top: 20px;
 }
 
 * {
