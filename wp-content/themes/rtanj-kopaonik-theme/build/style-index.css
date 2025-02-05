@@ -380,37 +380,75 @@ h6 {
   position: relative;
   padding: 0;
   margin-top: 150px;
+  height: 45vh;
+  text-transform: uppercase;
 }
-.counter__top {
-  position: absolute;
-  top: -215px;
-  left: 0;
-  width: 100%;
-}
-.counter__top img {
-  width: 100%;
+@media screen and (min-width: 2000px) {
+  .counter {
+    margin-top: 300px;
+  }
 }
 .counter__image {
   position: absolute;
   left: 0;
+  width: 100%;
 }
 .counter__image--top {
-  top: -215px;
+  display: none;
+}
+@media screen and (min-width: 980px) {
+  .counter__image--top {
+    display: block;
+    top: -128px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .counter__image--top {
+    top: -217px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .counter__image--top {
+    top: -412px;
+  }
 }
 .counter__image--bottom {
-  bottom: -80px;
+  display: none;
+}
+@media screen and (min-width: 980px) {
+  .counter__image--bottom {
+    display: block;
+    bottom: 261px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .counter__image--bottom {
+    bottom: 0px;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .counter__image--bottom {
+    bottom: 142px;
+  }
 }
 .counter__image--main {
   position: relative;
-  padding-top: 22%;
   overflow: hidden;
+  height: 100%;
 }
 .counter__image--main img {
   position: absolute;
-  top: 63px;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: auto;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (min-width: 980px) {
+  .counter__image--main img {
+    top: 63px;
+  }
 }
 .counter__image img {
   width: 100%;
@@ -424,13 +462,34 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0 0 120px 0;
+  flex-wrap: wrap;
+  padding: 0;
 }
-.counter__item:nth-of-type(2) {
-  border-width: 0 2px;
-  border-style: solid;
-  border-color: #fff;
-  padding: 20px 150px;
+@media screen and (min-width: 980px) {
+  .counter__content {
+    padding-top: 50px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .counter__content {
+    padding-top: 0;
+  }
+}
+.counter__item {
+  width: 100%;
+}
+@media screen and (min-width: 980px) {
+  .counter__item {
+    width: auto;
+  }
+  .counter__item:nth-of-type(2) {
+    width: auto;
+    border-width: 0 2px;
+    border-style: solid;
+    border-color: #fff;
+    padding: 20px 150px;
+  }
 }
 
 nav {

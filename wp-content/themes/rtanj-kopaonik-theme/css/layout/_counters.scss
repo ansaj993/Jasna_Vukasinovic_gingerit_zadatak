@@ -6,40 +6,67 @@
     position: relative;
     padding: 0;
     margin-top: 150px;
+    height: 45vh;
+    text-transform: uppercase;
 
-    &__top {
-        position: absolute;
-        top: -215px;
-        left: 0;
-        width: 100%;
-        
-        img {
-            width: 100%;
-        }
+    @media screen and (min-width: $huge) {
+        margin-top: 300px;
     }
 
     &__image {
         position: absolute;
         left: 0;
+        width: 100%;
+
 
         &--top {
-            top: -215px;
+            display: none;
+            @media screen and (min-width: $large) {
+                display: block;
+                top: -128px;
+            }   
+
+            @media screen and (min-width: $xlarge) {
+                top: -217px;
+            }   
+
+            @media screen and (min-width: $huge) {
+                top: -412px;
+            }   
         }
 
         &--bottom {
-            bottom: -80px;
+            display: none;
+
+            @media screen and (min-width: $large) {
+                display: block;
+                bottom: 261px;
+            }
+
+            @media screen and (min-width: $xlarge) {
+                bottom: 0px;
+            }
+
+            @media screen and (min-width: $huge) {
+                bottom: 142px;
+            }
         }
         
         &--main {
             position: relative;
-            padding-top: 22%;
             overflow: hidden;
+            height: 100%;
             img {
                 position: absolute;
-                top: 63px;
+                top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                height: auto;
+                height: 100%;
+                object-fit: cover;
+
+                @media screen and (min-width: $large) {
+                    top: 63px;
+                }
             } 
         }
 
@@ -57,15 +84,29 @@
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 0 0 120px 0;
+        flex-wrap: wrap;
+        padding: 0;
+        @media screen and (min-width:$large) {
+            padding-top: 50px;
+            align-items: flex-start;
+        }
+
+        @media screen and (min-width:$xlarge) {
+            padding-top: 0;
+        }
     }
 
     &__item {
-        &:nth-of-type(2){
-            border-width: 0 2px;
-            border-style: solid;
-            border-color: #fff;
-            padding: 20px 150px;
+        width: 100%;
+        @media screen and (min-width: $large){
+            width: auto;
+            &:nth-of-type(2){
+                width: auto;
+                border-width: 0 2px;
+                border-style: solid;
+                border-color: #fff;
+                padding: 20px 150px;
+            }
         }
     }
 }
