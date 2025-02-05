@@ -42,6 +42,7 @@ h2 {
     font-family: $titleFont;
     font-size: 30px;
     font-weight: 800;
+    color: $themeBlue;
 
     @media screen and (min-width:$large) {
         font-size: 55px;
@@ -53,9 +54,11 @@ h3 {
     font-family: $titleFont;
     font-weight: 700;
     text-align: center;
+    line-height: 30px;
 
     @media screen and (min-width: $large) {
         font-size: 40px;
+        line-height: 45px;
     }
 }
 

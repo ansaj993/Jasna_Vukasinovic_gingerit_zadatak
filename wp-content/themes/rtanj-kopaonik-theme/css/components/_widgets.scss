@@ -19,9 +19,13 @@
     align-items: baseline;
     padding-top: 20px;
     justify-content: center;
+    width: 85%;
+    margin: auto;
 
     @media screen and (min-width: $large) {
         justify-content: flex-start;    
+        width: 100%;
+        margin: 0;
     }
 
     i {
