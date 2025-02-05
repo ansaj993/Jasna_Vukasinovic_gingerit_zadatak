@@ -17,7 +17,7 @@
             height: auto;
         }
 
-        @media screen and (min-width: $tablet) {
+        @media screen and (min-width: $mobileLandscape) {
             top: -200px;
         }
 
@@ -73,8 +73,8 @@
                 }
             }
              
-            @media screen and (min-width: $tablet) {
-                height: 220px;
+            @media screen and (min-width: $mobileLandscape) {
+                height: 210px;
             }
             
             @media screen and (min-width: $xlarge) {
