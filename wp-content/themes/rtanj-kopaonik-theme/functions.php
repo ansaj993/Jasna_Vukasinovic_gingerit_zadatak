@@ -11,6 +11,8 @@ function rtanj_scripts(){
     wp_enqueue_style('segoe-font', 'https://fonts.cdnfonts.com/css/segoe-ui-4');    
 
     wp_enqueue_script('my-script-rtanj', get_theme_file_uri('/build/index.js'), null, '1.0', true);
+    wp_enqueue_script('rtanj-fa-icons', 'https://kit.fontawesome.com/9938593a4f.js');
+
 }
 
 // Menus and support

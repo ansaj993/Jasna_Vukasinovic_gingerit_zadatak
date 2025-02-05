@@ -58,37 +58,8 @@
         <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="section counter">
-        <div class="counter__image counter__image--top">
-            <img src="wp-content/themes/rtanj-kopaonik-theme/img/vector 2.png" alt="trees-img">
-        </div>
-
-        <div class="counter__image counter__image--main">
-            <img src="wp-content/themes/rtanj-kopaonik-theme/img/bf54bd45cc3351c6f34f377468a24b0a.jpeg" alt="trees-bg">
-        </div>
-      
-        <div class="section__content section__content--light counter__content">
-            <div class="counter__item">
-                <h2 class="title">2017</h2>
-                <h5>metara nadmorske visine</h5>
-            </div>
-
-            <div class="counter__item">
-                <h2 class="title">74</h2>
-                <h5>sobe</h5>
-            </div>
-
-            <div class="counter__item">
-                <h2 class="title">0</h2>
-                <h5>metara do ski staze</h5>
-            </div>   
-        </div>
-        
-        <div class="counter__image counter__image--bottom">
-            <img src="wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="trees-img">
-        </div>
-    </section>
-
+    <?php get_template_part( 'template-parts/content', 'counter' );?>
+   
     <section class="section">
         <div class="section__content section__content--dark">
             <h6 class="subtitle">ZA NAJVEĆE HEDONISTE</h6>
@@ -118,27 +89,102 @@
         <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="section about section--dark">
-        <div class="about__top">
-            <img src="wp-content/themes/rtanj-kopaonik-theme/img/vector 3.png" alt="trees-img">
+    <section class="section">
+        <div class="section__content section__content--dark">
+            <h6 class="subtitle">Galerija</h6>
+            <h3 class="title">Vaš savršen odmor u slikama</h3>
         </div>
 
-        <div class="section__content section__content--light">
-            <h6 class="subtitle">O nama</h6>
-            <h3 class="title">Dom pravih avanturista, još od 1958. godine</h3>
-            <p>Rtanj je smešten ispod vrha Mali Karaman na nadmorskoj visini od 1786 metara, na samoj skijaškoj stazi. Jedno je od najčuvenijih mesta na Kopaoniku i poznat kao dom naših olimpijaca, skijaša, planinara i ljudi dobre volje još od 1958. godine. Tokom svih ovih godina postao je ikona Srebrne planine, pre svega zbog specifične atmosfere, dobre zabave i planinskog duha koji u njemu živi.</p>
+        <div class="query query--gallery-titles">
+            <?php 
+                $gallery = new WP_Query(array(
+                    'post_type' => 'galerija',
+                    'posts_per_page' => -1,
+                    'order' => 'ASC'
+                ));
+
+                if($gallery->have_posts()){
+                    while($gallery->have_posts()){
+                        $gallery->the_post();
+                        ?>
+
+                        <h5 class="query__title"><?php the_title();?></h5>
+                        
+                    <?php }
+                }
+            ;?>
         </div>
 
-        <div class="images">
-            <div class="images__item">
-                <img src="wp-content/themes/rtanj-kopaonik-theme/img/60a219591272e71a81544122d0ece457.png" alt="hero-image">
-            </div>
+        <div class="query query--fullwidth">
+            <?php 
+                $gallery = new WP_Query(array(
+                    'post_type' => 'galerija',
+                    'posts_per_page' => -1,
+                    'order' => 'ASC'
+                ));
 
-            <div class="images__item">
-                <img src="wp-content/themes/rtanj-kopaonik-theme/img/d9affb58c8fb7794e6426df9cd1fd78f.jpeg" alt="hero-image">
-            </div>
+                if($gallery->have_posts()){
+                    while($gallery->have_posts()){
+                        $gallery->the_post();
+                        ?>
+
+                        <?php 
+                            $images = get_field('gallery');
+                            if( $images ){ ?>
+                                <ul class="query__gallery">
+                                    <?php foreach( $images as $image ){ ?>
+                                        <li>
+                                            <a href="<?php echo esc_url($image['url']); ?>">
+                                                <img src="<?php echo esc_url($image['sizes']['large']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
+                                            </a>
+                                        </li>
+                                    <?php } ?>
+                                </ul>
+                            <?php } ?>
+                    <?php }
+                }
+            ;?>
         </div>
     </section>
+
+    <section class="section">
+        <div class="section__content section__content--dark">
+            <h6 class="subtitle">Iskustva korisnika</h6>
+            <h3 class="title">Pogledaj šta naši gosti kažu o nama</h3>
+        </div>
+
+        <div class="query query--nofullwidth">
+            <?php 
+                $testimonials = new WP_Query(array(
+                    'post_type' => 'iskustva',
+                    'posts_per_page' => -1,
+                    'order' => 'ASC'
+                ));
+
+                if($testimonials->have_posts()){
+                    while($testimonials->have_posts()){
+                        $testimonials->the_post();
+                        ?>
+
+                        <div class="card testimonial">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <p>
+                                <?php the_field('testimonial_text');?>
+                            </p>
+
+                            <p class="name">
+                                <?php the_field('testimonial_name');?>
+                            </p>
+                            <i class="fa-solid fa-quote-right"></i>
+                        </div>
+                    
+                    <?php }
+                }
+            ;?>
+        </div>
+    </section>
+
+    <?php get_template_part( 'template-parts/content', 'about' );?>
 
     <section class="section">
         <div class="section__content section__content--dark">

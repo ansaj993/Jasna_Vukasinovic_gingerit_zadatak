@@ -1,0 +1,33 @@
+// Testimonials
+
+@use '../base/' as *;
+
+.testimonial {
+    padding: 38px;
+    border: 2px solid $themeBlue;
+    border-radius: 0 20px 0 20px;
+    position: relative;
+
+    i {
+        font-size: 55px;
+        color: $themeBrown;
+        position: absolute;
+        padding: 8px 17px;
+        background-color: white;
+        &:first-of-type {
+            top: -33px;
+            left: -42px;
+        }
+
+        &:last-of-type {
+            bottom: -32px;
+            right: -42px;
+        }
+    }
+
+    .name {
+        padding-top: 34px;
+        color: $themeBrown;
+        font-weight: 600;
+    }
+}

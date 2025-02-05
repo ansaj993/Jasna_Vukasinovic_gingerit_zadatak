@@ -200,25 +200,40 @@ h6 {
 
 .query {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: left;
-}
-.query--fullwidth {
-  margin-bottom: 50px;
 }
 .query--nofullwidth {
   width: 95%;
-  margin: 0 auto 100px;
+  margin: 0 auto;
 }
 .query--faq {
   display: block;
   width: 85%;
   margin: 0 auto 50px;
 }
+.query--gallery-titles {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.query__gallery {
+  width: 100%;
+  display: none;
+}
+.query__gallery li {
+  width: 33.3333333333%;
+}
+.query__gallery li img {
+  width: 100%;
+}
+.query__gallery:first-of-type {
+  display: flex;
+}
 
 .section {
   text-align: center;
-  padding: 40px 0;
+  padding-bottom: 80px;
   position: relative;
   z-index: 1;
 }
@@ -233,7 +248,7 @@ h6 {
 @media screen and (min-width: 980px) {
   .section__content {
     width: 50%;
-    padding: 30px 0 60px 0;
+    padding: 0 0 60px;
   }
 }
 .section__content h6 {
@@ -270,6 +285,7 @@ h6 {
   border: 1px solid #CBAF96;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
+  margin-top: 100px;
 }
 .section__button:hover {
   background-color: #CBAF96;
@@ -278,8 +294,8 @@ h6 {
 
 .about {
   position: relative;
-  margin-top: 200px;
-  padding-top: 0;
+  margin: 200px 0 80px;
+  padding-top: 30px;
 }
 .about__top {
   width: 100%;
@@ -664,7 +680,7 @@ nav .menu li {
 }
 
 .card {
-  width: 33%;
+  width: 30%;
   position: relative;
   padding: 43px 73px 43px 43px;
 }
@@ -713,7 +729,6 @@ nav .menu li {
   border-radius: 20px;
 }
 .card--bordered:nth-of-type(2) {
-  margin: 0 55px;
   transform: translateY(65px);
 }
 .card--bordered:nth-of-type(2)::after {
@@ -741,6 +756,33 @@ nav .menu li {
 }
 .faq p {
   padding-top: 20px;
+}
+
+.testimonial {
+  padding: 38px;
+  border: 2px solid #1C4259;
+  border-radius: 0 20px 0 20px;
+  position: relative;
+}
+.testimonial i {
+  font-size: 55px;
+  color: #CBAF96;
+  position: absolute;
+  padding: 8px 17px;
+  background-color: white;
+}
+.testimonial i:first-of-type {
+  top: -33px;
+  left: -42px;
+}
+.testimonial i:last-of-type {
+  bottom: -32px;
+  right: -42px;
+}
+.testimonial .name {
+  padding-top: 34px;
+  color: #CBAF96;
+  font-weight: 600;
 }
 
 * {

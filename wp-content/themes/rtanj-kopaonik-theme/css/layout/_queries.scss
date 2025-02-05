@@ -4,22 +4,37 @@
 
 .query {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: left;
 
-    
-    &--fullwidth {
-        margin-bottom: 50px;
-    }
-   
     &--nofullwidth {
         width: $width95;
-        margin: 0 auto 100px;
+        margin: 0 auto;
     }
 
     &--faq {
         display: block;
         width: $width85;
         margin: 0 auto 50px;
+    }
+
+    &--gallery-titles {
+        width: 50%;
+        margin: auto;
+        margin-bottom: 50px;
+    }
+
+    &__gallery {
+        width: 100%;
+        display: none;
+        li {
+            width: calc(100% / 3);
+            img {
+                width: 100%;
+            }
+        }
+        &:first-of-type {
+            display: flex;
+        }
     }
 }

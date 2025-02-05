@@ -79,7 +79,7 @@ function rtanj_post_types(){
     // Galerija Post Type
 
     register_post_type('galerija', array(
-        'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
+        'supports' => array('title', 'thumbnail'),
         'rewrite' => array('slug' => 'galerija'),
         'has_archive' => true,
         'public' => true,
@@ -104,11 +104,10 @@ function rtanj_post_types(){
     // Iskustva Post Type
 
     register_post_type('iskustva', array(
-        'supports' => array('title', 'editor'),
+        'supports' => array('title'),
         'rewrite' => array('slug' => 'iskustva'),
         'has_archive' => false,
         'public' => true,
-        'show_in_rest' => true,
         'labels' => array(
             'name' => 'Iskustva',
             'singular_name' => 'Iskustvo',
