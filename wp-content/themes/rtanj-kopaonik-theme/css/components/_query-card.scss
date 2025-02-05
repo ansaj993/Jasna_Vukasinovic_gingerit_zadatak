@@ -34,6 +34,14 @@
         }
     }
 
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        i {
+            margin-right: 10px;
+        }
+    }
+
     &--bordered {
         height: 605px;
 

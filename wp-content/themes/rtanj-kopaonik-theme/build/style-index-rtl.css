@@ -210,7 +210,7 @@ h6 {
 .query--faq {
   display: block;
   width: 85%;
-  margin: 0 auto 50px;
+  margin: 0 auto;
 }
 .query--gallery-titles {
   width: 50%;
@@ -707,6 +707,13 @@ nav .menu li {
   display: block;
   margin: 22px 0;
   font-weight: 700;
+}
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.card__bottom i {
+  margin-left: 10px;
 }
 .card--bordered {
   height: 605px;
