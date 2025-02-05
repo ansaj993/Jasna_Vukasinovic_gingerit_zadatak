@@ -4,7 +4,9 @@
 
 .section {
     text-align: center;
-    padding: 40px 0 70px;
+    padding: 40px 0;
+    position: relative;
+    z-index: 1;
 
     &--dark {
         background-color: $themeBlue;
@@ -33,6 +35,10 @@
 
             .subtitle {
                 color: $themeBrown;
+            }
+
+            .title {
+                color: white;
             }
           
             a {

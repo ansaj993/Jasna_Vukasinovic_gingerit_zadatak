@@ -58,6 +58,37 @@
         <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
+    <section class="section counter">
+        <div class="counter__image counter__image--top">
+            <img src="wp-content/themes/rtanj-kopaonik-theme/img/vector 2.png" alt="trees-img">
+        </div>
+
+        <div class="counter__image counter__image--main">
+            <img src="wp-content/themes/rtanj-kopaonik-theme/img/bf54bd45cc3351c6f34f377468a24b0a.jpeg" alt="trees-bg"  class="counter__image">
+        </div>
+      
+        <div class="section__content section__content--light counter__content">
+            <div class="counter__item">
+                <h2 class="title">2017</h2>
+                <h5>metara nadmorske visine</h5>
+            </div>
+
+            <div class="counter__item">
+                <h2 class="title">74</h2>
+                <h5>sobe</h5>
+            </div>
+
+            <div class="counter__item">
+                <h2 class="title">0</h2>
+                <h5>metara do ski staze</h5>
+            </div>
+            
+            <div class="counter__image counter__image--bottom">
+                <img src="wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="trees-img">
+            </div>
+        </div>
+    </section>
+
     <section class="section">
         <div class="section__content section__content--dark">
             <h6 class="subtitle">ZA NAJVEĆE HEDONISTE</h6>
@@ -91,6 +122,7 @@
         <div class="about__top">
             <img src="wp-content/themes/rtanj-kopaonik-theme/img/vector 3.png" alt="trees-img">
         </div>
+
         <div class="section__content section__content--light">
             <h6 class="subtitle">O nama</h6>
             <h3 class="title">Dom pravih avanturista, još od 1958. godine</h3>
