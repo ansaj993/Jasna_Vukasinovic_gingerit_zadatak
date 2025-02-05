@@ -1,5 +1,5 @@
 <?php
-/* The header of the theme */
+// The header of the theme 
 ?>
 
 <!DOCTYPE html>
@@ -19,6 +19,13 @@
             <div class="header__image--top">
                 <img src="wp-content/themes/rtanj-kopaonik-theme/img/1729073661301344.png" alt="hero-image">
             </div>
+        <?php } else {?>
+            <div class="header__image--top">
+                <?php if(has_post_thumbnail()){
+                   echo get_the_post_thumbnail();
+                } ;?>
+            </div>
+            
         <?php } ?>
 
         <div class="menu-icon">
@@ -44,11 +51,11 @@
                 <p>booking.com ranking</p>
             </div>
         <?php } else {;?>
-            <h1><?php the_title();?></h1>
+            <h1 class="header__wrapper header__wrapper--light"><?php the_title();?></h1>
         <?php };?>
 
         <div class="header__image--bottom">
-            <img src="wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="bottom-image">
+            <img src="/wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="bottom-image">
         </div>
 </header>
     

@@ -91,4 +91,13 @@ function rtanjSidebars(){
             'after_title' => '</h4>'
         )
     );
+
+    register_sidebar (
+        array (
+            'name' => 'Main Sidebar',
+            'id' => 'main-sidebar',
+            'before_title' => '<h4 class="widget-title">',
+            'after_title' => '</h4>'
+        )
+    );
 }

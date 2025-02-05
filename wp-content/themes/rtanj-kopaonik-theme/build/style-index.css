@@ -508,6 +508,21 @@ h6 {
   }
 }
 
+.single main {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.single article {
+  width: 60%;
+  margin-bottom: 50px;
+}
+.single aside {
+  width: 30%;
+}
+
 nav {
   background-color: #1C4259;
   z-index: 10;
