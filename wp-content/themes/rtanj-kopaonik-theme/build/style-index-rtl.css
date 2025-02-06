@@ -568,6 +568,15 @@ h6 {
   margin-left: 10px;
 }
 
+.main-content {
+  margin-top: 30px;
+}
+@media screen and (min-width: 980px) {
+  .main-content {
+    margin-top: 0;
+  }
+}
+
 .single .content-area, .blog .content-area, .archive .content-area, .page .content-area {
   width: 86%;
   margin: auto;
@@ -582,12 +591,14 @@ h6 {
 .blog .article, .archive .article, .page .article {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
   margin-bottom: 30px;
 }
 .blog .article__image, .archive .article__image, .page .article__image {
-  width: 30%;
+  width: 100%;
   margin-left: 20px;
-  height: 250px;
+  height: 150px;
   position: relative;
   overflow: hidden;
 }
@@ -599,11 +610,26 @@ h6 {
   width: 100%;
   height: auto;
 }
+@media screen and (min-width: 768px) {
+  .blog .article__image, .archive .article__image, .page .article__image {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .blog .article__image, .archive .article__image, .page .article__image {
+    height: 250px;
+  }
+}
 .blog .article__body, .archive .article__body, .page .article__body {
-  width: 70%;
+  width: 100%;
 }
 .blog .article__body .date, .archive .article__body .date, .page .article__body .date {
   padding: 10px 0;
+}
+@media screen and (min-width: 768px) {
+  .blog .article__body, .archive .article__body, .page .article__body {
+    width: 65%;
+  }
 }
 .blog .article__link, .archive .article__link, .page .article__link {
   display: block;
