@@ -53,14 +53,14 @@ function rtanj_post_types(){
 
     // Sadrzaj Post Type
 
-    register_post_type('sadrzaj', array(
+    register_post_type('sadrzaji', array(
         'supports' => array('title', 'excerpt', 'editor', 'thumbnail'),
         'rewrite' => array('slug' => 'sadrzaji'),
         'has_archive' => true,
         'public' => true,
         'show_in_rest' => true,
         'labels' => array(
-            'name' => __( 'Sadržaj', 'rtanj-kopaonik-theme' ),
+            'name' => __( 'Sadržaji', 'rtanj-kopaonik-theme' ),
             'singular_name' => __( 'Sadržaj', 'rtanj-kopaonik-theme' ),
             'add_new' => __( 'Dodaj novi', 'rtanj-kopaonik-theme' ),
             'add_new_item' => __( 'Dodaj novi sadržaj', 'rtanj-kopaonik-theme' ),

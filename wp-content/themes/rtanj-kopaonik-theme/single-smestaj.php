@@ -3,7 +3,7 @@
 <div id="main-content" class="main-content">
 
     <div id="primary" class="content-area">
-        <article id="content" class="site-content" role="main">
+        <article id="content" class="smestaj site-content" role="main">
             <?php
                 // Start the Loop.
                 while ( have_posts() ) {
@@ -12,7 +12,7 @@
 
                     $images = get_field('gallery');
                     if( $images ){ ?>
-                        <ul class="query__gallery">
+                        <ul class="gallery">
                             <?php foreach( $images as $image ){ ?>
                                 <li>
                                     <a href="<?php echo esc_url($image['url']); ?>">

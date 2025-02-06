@@ -32,7 +32,7 @@
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'specijalne-ponude' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -63,7 +63,7 @@
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'aktivnosti' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <?php get_template_part( 'template-parts/content', 'counter' );?>
@@ -78,7 +78,7 @@
         <div class="query query--nofullwidth">
             <?php 
                 $contents = new WP_Query(array(
-                    'post_type' => 'sadrzaj',
+                    'post_type' => 'sadrzaji',
                     'posts_per_page' => -1,
                     'order' => 'ASC'
                 ));
@@ -91,10 +91,12 @@
 
                     }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'sadrzaji' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -140,7 +142,7 @@
                         <?php 
                             $images = get_field('gallery');
                             if( $images ){ ?>
-                                <ul class="query__gallery">
+                                <ul class="gallery">
                                     <?php foreach( $images as $image ){ ?>
                                         <li>
                                             <a href="<?php echo esc_url($image['url']); ?>">
@@ -191,6 +193,7 @@
                     
                     <?php }
                 }
+                wp_reset_query();
             ;?>
         </div>
     </section>
@@ -224,7 +227,7 @@
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section">
@@ -258,7 +261,7 @@
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Učitaj sve <i class="fa-solid fa-angle-down"></i></a>
+        <a href="#" class="button section__button">Učitaj sve <i class="fa-solid fa-angle-down"></i></a>
     </section>
 </main>
 

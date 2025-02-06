@@ -3,13 +3,10 @@
 @use '../base/' as *;
 
 .single {
-    &-specijalne-ponude, &-sadrzaj, &-aktivnosti, &-smestaj {
+    &-specijalne-ponude, &-sadrzaji, &-aktivnosti, &-smestaj {
         .site-content {
+            width: 100%;
             margin-bottom: 70px;
-
-            @media screen and (min-width: $large) {
-                width: 100%;
-            }
         }
     }
 
@@ -17,6 +14,33 @@
         .offers {
             margin-bottom: 20px;
         }
+    }
+
+    &-smestaj {
+       .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            li {
+                width: 100%;
+                height: 120px;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                @media screen and (min-width: $tablet) {
+                    width: calc(100% / 3);
+                }
+
+                @media screen and (min-width: $xlarge) {
+                    height: 220px;
+                }
+            }
+
+
+       }
     }
 }
 

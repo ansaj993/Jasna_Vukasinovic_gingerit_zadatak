@@ -217,24 +217,24 @@ h6 {
   margin: auto;
   margin-bottom: 50px;
 }
-.query__gallery {
+.query .gallery {
   width: 100%;
   display: none;
 }
-.query__gallery li {
+.query .gallery li {
   width: 33.3333333333%;
   height: 240px;
   position: relative;
   overflow: hidden;
 }
-.query__gallery li img {
+.query .gallery li img {
   width: 100%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.query__gallery:first-of-type {
+.query .gallery:first-of-type {
   display: flex;
 }
 .query .offers {
@@ -560,16 +560,35 @@ h6 {
   padding-bottom: 15px;
 }
 
-.single-specijalne-ponude .site-content, .single-sadrzaj .site-content, .single-aktivnosti .site-content, .single-smestaj .site-content {
+.single-specijalne-ponude .site-content, .single-sadrzaji .site-content, .single-aktivnosti .site-content, .single-smestaj .site-content {
+  width: 100%;
   margin-bottom: 70px;
-}
-@media screen and (min-width: 980px) {
-  .single-specijalne-ponude .site-content, .single-sadrzaj .site-content, .single-aktivnosti .site-content, .single-smestaj .site-content {
-    width: 100%;
-  }
 }
 .single-specijalne-ponude .offers {
   margin-bottom: 20px;
+}
+.single-smestaj .gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.single-smestaj .gallery li {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+.single-smestaj .gallery li img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .single-smestaj .gallery li {
+    width: 33.3333333333%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .single-smestaj .gallery li {
+    height: 220px;
+  }
 }
 
 .offers i {
