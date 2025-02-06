@@ -6,17 +6,17 @@
         <article id="content" class="site-content" role="main">
             <?php
                 // Start the Loop.
-                while ( have_posts() ) : the_post();?>
+                while ( have_posts() ) {
+                    
+                    the_post();
 
-                    <?php the_content();?>
+                    get_template_part('template-parts/content', 'ponude');
 
-               <?php endwhile;
+                    the_content();
+
+                }
             ?>
         </article><!-- #content -->
-        
-        <aside>
-               <?php dynamic_sidebar('main-sidebar');?>
-        </aside>
     </div><!-- #primary -->
 </div><!-- #main-content -->
 <?php get_footer();?>

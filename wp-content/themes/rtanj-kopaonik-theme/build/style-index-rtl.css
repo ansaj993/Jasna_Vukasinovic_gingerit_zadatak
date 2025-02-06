@@ -508,19 +508,67 @@ h6 {
   }
 }
 
-.single main {
+.single-post .content-area {
   width: 80%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.single article {
-  width: 60%;
+.single-post .site-content {
   margin-bottom: 50px;
 }
-.single aside {
-  width: 30%;
+@media screen and (min-width: 980px) {
+  .single-post .site-content {
+    width: 60%;
+  }
+}
+.single-post aside {
+  width: 100%;
+  text-align: center;
+}
+@media screen and (min-width: 980px) {
+  .single-post aside {
+    width: 30%;
+    text-align: right;
+  }
+}
+.single-post aside h4, .single-post aside a {
+  color: #1C4259;
+  font-weight: 600;
+}
+.single-post aside a:hover {
+  color: #CBAF96;
+}
+.single-post aside h4 {
+  margin-bottom: 20px;
+}
+.single-post aside .post-date {
+  display: block;
+}
+.single-post aside li {
+  padding-bottom: 15px;
+}
+
+.single-specijalne-ponude .content-area {
+  width: 80%;
+  margin: auto;
+}
+.single-specijalne-ponude .site-content {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 980px) {
+  .single-specijalne-ponude .site-content {
+    width: 100%;
+  }
+}
+
+.offers {
+  display: flex;
+  justify-content: space-between;
+}
+.offers i {
+  margin-left: 10px;
 }
 
 nav {
@@ -722,13 +770,6 @@ nav .menu li {
   display: block;
   margin: 22px 0;
   font-weight: 700;
-}
-.card__bottom {
-  display: flex;
-  justify-content: space-between;
-}
-.card__bottom i {
-  margin-left: 10px;
 }
 .card--bordered {
   height: 605px;

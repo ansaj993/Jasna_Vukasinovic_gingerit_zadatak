@@ -5,10 +5,9 @@
         <p><?php echo get_the_excerpt();?></p>
         <a href="<?php echo get_the_permalink()?>">Detaljnije</a>
         <div class="card__bottom">
-            <?php if(!is_main_query()){ ?>
-                <p><i class="fa-solid fa-wallet"></i><?php the_field('cena')?></p>
-                <p><i class="fa-solid fa-calendar-days"></i><?php the_field('broj_dana_nocenja')?></p>
-           <?php } else {?>
+            <?php if(( get_post_type() == 'specijalne-ponude' )){ 
+                get_template_part('template-parts/content', 'ponude');
+            } else {?>
                 <p><?php echo get_the_date('d.m.Y');?></p>
             <?php } ?>
         </div>

@@ -1,5 +1,9 @@
-.single {
-    main {
+//Single post
+
+@use '../base/' as *;
+
+.single-post {
+    .content-area {
         width: 80%;
         margin: auto;
         display: flex;
@@ -7,12 +11,43 @@
         flex-wrap: wrap;
     }
 
-    article {
-        width: 60%;
+    .site-content {
         margin-bottom: 50px;
+
+        @media screen and (min-width: $large) {
+            width: 60%;
+        }
     }
 
     aside {
-        width: 30%;
+        width: 100%;
+        text-align: center;
+        @media screen and (min-width: $large) {
+            width: 30%;
+            text-align: left;
+        }
+
+        h4, a {
+            color: $themeBlue;
+            font-weight: 600;
+        }
+
+        a {
+            &:hover {
+                color: $themeBrown;
+            }
+        }
+    
+        h4 {
+            margin-bottom: 20px;
+        }
+        
+        .post-date {
+            display: block;
+        }
+        
+        li {
+            padding-bottom: 15px;
+        }
     }
 }
