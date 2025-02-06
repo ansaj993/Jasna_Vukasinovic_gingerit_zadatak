@@ -223,9 +223,16 @@ h6 {
 }
 .query__gallery li {
   width: 33.3333333333%;
+  height: 240px;
+  position: relative;
+  overflow: hidden;
 }
 .query__gallery li img {
   width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .query__gallery:first-of-type {
   display: flex;
@@ -286,10 +293,11 @@ h6 {
   display: inline-block;
   color: #CBAF96;
   padding: 20px 35px;
-  border: 1px solid #CBAF96;
+  border: 2px solid #CBAF96;
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   margin-top: 100px;
+  font-weight: 600;
 }
 .section__button:hover {
   background-color: #CBAF96;
@@ -644,19 +652,22 @@ h6 {
 nav {
   background-color: #1C4259;
   z-index: 10;
-  display: none;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   text-align: center;
   padding: 30px 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease-out;
 }
 @media screen and (min-width: 980px) {
   nav {
     display: block;
     background-color: transparent;
     padding: 0;
+    height: auto;
   }
 }
 nav a {
@@ -664,6 +675,9 @@ nav a {
   font-weight: 700;
   padding: 15px;
   display: block;
+}
+nav.active {
+  height: 100%;
 }
 nav .menu {
   width: 100%;
@@ -674,6 +688,10 @@ nav .menu {
 }
 nav .menu li {
   width: 100%;
+}
+nav .menu .logo-item {
+  width: 50%;
+  margin: 10px auto 0;
 }
 @media screen and (min-width: 980px) {
   nav .menu {
@@ -687,6 +705,8 @@ nav .menu li {
     order: 0;
   }
   nav .menu .logo-item {
+    width: auto;
+    margin: 0;
     order: 1;
   }
   nav .menu .logo-item a {
@@ -723,20 +743,56 @@ nav .menu li {
   }
 }
 
-.mc4wp-form-fields {
+.booking {
+  width: 70%;
+  margin: 0 auto 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.booking__item {
+  border-right: 2px solid #1C4259;
+  padding: 10px 40px;
+}
+.booking__item:last-of-type {
+  border: none;
+}
+.booking i {
+  background-color: #CBAF96;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 30px;
+}
+.booking input, .booking select, .booking label {
+  border: none;
+  display: block;
+  font-family: "Segoe", sans-serif;
+  outline: none;
+  color: #1C4259;
+  font-weight: 600;
+  padding: 5px;
+  font-size: 17px;
+}
+.booking input, .booking select {
+  background-color: rgba(203, 175, 150, 0.07);
+  border-radius: 10px;
+}
+
+.newsletter {
   position: relative;
 }
-.mc4wp-form-fields input {
+.newsletter input {
   margin-top: 20px;
   padding: 17px 10px;
   border-radius: 10px;
 }
-.mc4wp-form-fields input[type=email] {
+.newsletter[type=email] {
   width: 100%;
   position: relative;
   border: none;
 }
-.mc4wp-form-fields input[type=submit] {
+.newsletter[type=submit] {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -816,6 +872,7 @@ nav .menu li {
   width: 30%;
   position: relative;
   padding: 43px 73px 43px 43px;
+  border-radius: 20px;
 }
 .card__image {
   position: absolute;
@@ -825,30 +882,55 @@ nav .menu li {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 .card__content {
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 10;
-  width: 100%;
 }
 .card__content p {
   padding-top: 10px;
 }
 .card__content a {
-  display: block;
+  display: inline-block;
   margin: 22px 0;
   font-weight: 700;
+  position: relative;
+}
+.card__content a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 75%;
+  background-color: white;
 }
 .card--bordered {
   height: 605px;
 }
-.card--bordered img {
-  border-radius: 20px;
-}
 .card--bordered .content {
   padding: 40px;
+  padding-right: 0;
+}
+.card--bordered:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  z-index: 10;
+  border-radius: 20px;
+}
+.card--bordered:hover h4::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 80%;
+  background-color: white;
+  margin-top: 3px;
 }
 .card--bordered::after {
   content: "";
@@ -872,6 +954,18 @@ nav .menu li {
   height: 450px;
   border-radius: 24px;
   overflow: hidden;
+  position: relative;
+}
+.card--scaled:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.67);
+  z-index: 10;
+  border-radius: 20px;
 }
 .card--scaled .content {
   padding: 23px;
@@ -889,6 +983,11 @@ nav .menu li {
 }
 .faq p {
   padding-top: 20px;
+  display: none;
+}
+.faq .title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .testimonial {

@@ -65,10 +65,11 @@
         display: inline-block;
         color: $themeBrown;
         padding: 20px 35px;
-        border: 1px solid $themeBrown;
+        border: 2px solid $themeBrown;
         border-radius: 10px;
         transition: all .5s ease-in-out;
         margin-top: 100px;
+        font-weight: 600;
         &:hover {
             background-color: $themeBrown;
             color: white;

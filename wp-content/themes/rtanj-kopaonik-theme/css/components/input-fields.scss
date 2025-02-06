@@ -1,0 +1,75 @@
+// Input fields
+
+@use '../base/' as *;
+
+.booking {
+    width: 70%;
+    margin: 0 auto 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__item {
+        border-right: 2px solid $themeBlue;
+        padding: 10px 40px;
+      
+        &:last-of-type {
+            border: none;
+        }
+    }
+
+    i {
+        background-color: $themeBrown;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        margin-top: 30px;
+    }
+
+    input, select, label {
+        border: none;
+        display: block;
+        font-family: $contentFont;
+        outline: none;
+        color: $themeBlue;
+        font-weight: 600;
+        padding: 5px;
+        font-size: 17px;
+    }
+
+    input, select {
+        background-color: rgba(203, 175, 150, .07);
+        border-radius: 10px;
+    }    
+
+}
+
+.newsletter {
+    position: relative;
+    input {
+        margin-top: 20px;
+        padding: 17px 10px;
+        border-radius: 10px;
+    }        
+    
+    &[type="email"]{
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    &[type="submit"]{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 62px;
+        height: 61px;
+        background-color: $themeBrown;
+        color: white;
+        border: none;
+        font-size: 25px;
+    }
+}
+
+
+

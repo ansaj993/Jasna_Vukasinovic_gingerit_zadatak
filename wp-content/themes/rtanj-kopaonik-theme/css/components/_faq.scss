@@ -11,5 +11,11 @@
 
     p {
         padding-top: 20px;
+        display: none;
+    }
+
+    .title {
+        display: flex;
+        justify-content: space-between;
     }
 }

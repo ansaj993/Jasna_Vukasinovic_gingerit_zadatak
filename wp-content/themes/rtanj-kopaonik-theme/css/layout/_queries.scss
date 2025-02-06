@@ -29,8 +29,15 @@
         display: none;
         li {
             width: calc(100% / 3);
+            height: 240px;
+            position: relative;
+            overflow: hidden;
             img {
                 width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
         &:first-of-type {

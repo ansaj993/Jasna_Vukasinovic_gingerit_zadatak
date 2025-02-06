@@ -1,6 +1,10 @@
 <?php get_header();?>
 
 <main>
+    <?php 
+    get_template_part( 'template-parts/content', 'booking' );
+    ?>
+
     <section class="section">
         <div class="section__content section__content--dark">
             <h6 class="subtitle">NAJBOLJE CENE</h6>
@@ -243,7 +247,7 @@
                         ?>
 
                         <div class="faq section__content--dark">
-                            <h5 class="title"><?php the_title();?></h5>
+                            <h5 class="title"><?php the_title();?><i class="fa-solid fa-angle-down"></i></h5>
                             <?php the_content();?>
                         </div>
                     
@@ -254,7 +258,7 @@
             ;?>
         </div>
 
-        <a href="<?php echo get_home_url();?>" class="button section__button">Učitaj sve</a>
+        <a href="<?php echo get_home_url();?>" class="button section__button">Učitaj sve <i class="fa-solid fa-angle-down"></i></a>
     </section>
 </main>
 
