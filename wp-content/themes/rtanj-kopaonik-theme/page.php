@@ -1,7 +1,11 @@
 <?php get_header();?>
 
-<main>
-    <?php the_content();?>
-</main>
+<div id="main-content" class="main-content">
+
+    <div id="primary" class="content-area">    
+        <?php the_content();?>
+    </div>
+    
+</div>
 
 <?php get_footer();?>

@@ -230,6 +230,10 @@ h6 {
 .query__gallery:first-of-type {
   display: flex;
 }
+.query .offers {
+  display: flex;
+  justify-content: space-between;
+}
 
 .section {
   text-align: center;
@@ -508,67 +512,107 @@ h6 {
   }
 }
 
-.single-post .content-area {
-  width: 80%;
-  margin: auto;
+.single .content-area {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-.single-post .site-content {
+.single .site-content {
   margin-bottom: 50px;
 }
 @media screen and (min-width: 980px) {
-  .single-post .site-content {
+  .single .site-content {
     width: 60%;
   }
 }
-.single-post aside {
+.single aside {
   width: 100%;
   text-align: center;
 }
 @media screen and (min-width: 980px) {
-  .single-post aside {
+  .single aside {
     width: 30%;
     text-align: left;
   }
 }
-.single-post aside h4, .single-post aside a {
+.single aside h4, .single aside a {
   color: #1C4259;
   font-weight: 600;
 }
-.single-post aside a:hover {
+.single aside a:hover {
   color: #CBAF96;
 }
-.single-post aside h4 {
+.single aside h4 {
   margin-bottom: 20px;
 }
-.single-post aside .post-date {
+.single aside .post-date {
   display: block;
 }
-.single-post aside li {
+.single aside li {
   padding-bottom: 15px;
 }
 
-.single-specijalne-ponude .content-area {
-  width: 80%;
-  margin: auto;
-}
-.single-specijalne-ponude .site-content {
-  margin-bottom: 50px;
+.single-specijalne-ponude .site-content, .single-sadrzaj .site-content, .single-aktivnosti .site-content, .single-smestaj .site-content {
+  margin-bottom: 70px;
 }
 @media screen and (min-width: 980px) {
-  .single-specijalne-ponude .site-content {
+  .single-specijalne-ponude .site-content, .single-sadrzaj .site-content, .single-aktivnosti .site-content, .single-smestaj .site-content {
     width: 100%;
   }
 }
-
-.offers {
-  display: flex;
-  justify-content: space-between;
+.single-specijalne-ponude .offers {
+  margin-bottom: 20px;
 }
+
 .offers i {
   margin-right: 10px;
+}
+
+.single .content-area, .blog .content-area, .archive .content-area, .page .content-area {
+  width: 86%;
+  margin: auto;
+}
+.single .content-area h4, .single .content-area h5, .single .content-area h6, .blog .content-area h4, .blog .content-area h5, .blog .content-area h6, .archive .content-area h4, .archive .content-area h5, .archive .content-area h6, .page .content-area h4, .page .content-area h5, .page .content-area h6 {
+  text-align: left;
+}
+
+.blog .content-area, .archive .content-area, .page .content-area {
+  padding-bottom: 50px;
+}
+.blog .article, .archive .article, .page .article {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.blog .article__image, .archive .article__image, .page .article__image {
+  width: 30%;
+  margin-right: 20px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.blog .article__image img, .archive .article__image img, .page .article__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+}
+.blog .article__body, .archive .article__body, .page .article__body {
+  width: 70%;
+}
+.blog .article__body .date, .archive .article__body .date, .page .article__body .date {
+  padding: 10px 0;
+}
+.blog .article__link, .archive .article__link, .page .article__link {
+  display: block;
+  color: #1C4259;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.blog .article__link:hover, .archive .article__link:hover, .page .article__link:hover {
+  color: #CBAF96;
 }
 
 nav {

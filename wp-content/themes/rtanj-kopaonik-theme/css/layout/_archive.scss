@@ -1,0 +1,62 @@
+@use '../base/' as *;
+
+//Archives 
+
+.single, .blog, .archive, .page {
+    .content-area {
+        width: 86%;
+        margin: auto;
+        h4, h5, h6 {
+            text-align: left;
+        }
+    }
+}
+
+.blog, .archive, .page {
+    .content-area {
+        padding-bottom: 50px;
+    }
+
+    .article {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        &__image {
+            width: 30%;
+            margin-right: 20px;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: auto;
+               }
+            }
+        
+
+        &__body {
+            width: 70%;
+
+            .date {
+                padding: 10px 0;
+            }
+        }
+
+        &__link {
+            display: block;
+            color: $themeBlue;
+            font-weight: 600;
+            padding-top: 10px;
+
+            &:hover {
+                color: $themeBrown;
+            }
+         }
+    }
+}
+

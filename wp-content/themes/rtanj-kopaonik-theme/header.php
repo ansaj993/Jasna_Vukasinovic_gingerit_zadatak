@@ -17,16 +17,18 @@
     
         <?php if(is_front_page()){?>
             <div class="header__image--top">
-                <img src="wp-content/themes/rtanj-kopaonik-theme/img/1729073661301344.png" alt="hero-image">
+                <img src="/wp-content/themes/rtanj-kopaonik-theme/img/1729073661301344.png" alt="hero-image">
             </div>
-        <?php } else {?>
-            <div class="header__image--top">
-                <?php if(has_post_thumbnail()){
-                   echo get_the_post_thumbnail();
-                } ;?>
-            </div>
-            
-        <?php } ?>
+        <?php } else {
+            if(!has_post_thumbnail() || is_archive() || is_home()){?>
+                 <div class="header__image--top" style="background-color: #1C4259;">
+                 </div>
+            <?php } else {;?>
+                <div class="header__image--top">
+                    <?php echo get_the_post_thumbnail();?>
+                </div>
+            <?php }
+        }; ?>
 
         <div class="menu-icon">
             <div class="bar"></div>
@@ -51,8 +53,12 @@
                 <p>booking.com ranking</p>
             </div>
         <?php } else {;?>
-            <h1 class="header__wrapper header__wrapper--light"><?php the_title();?></h1>
-        <?php };?>
+           <?php if(is_archive()){?>
+                <h1 class="header__wrapper header__wrapper--light"><?php post_type_archive_title();?></h1>
+           <?php } else {;?>
+                <h1 class="header__wrapper header__wrapper--light"><?php single_post_title();?></h1>
+           <?php }
+        };?>
 
         <div class="header__image--bottom">
             <img src="/wp-content/themes/rtanj-kopaonik-theme/img/Vector.png" alt="bottom-image">

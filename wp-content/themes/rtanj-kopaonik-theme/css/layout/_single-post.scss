@@ -2,10 +2,8 @@
 
 @use '../base/' as *;
 
-.single-post {
+.single {
     .content-area {
-        width: 80%;
-        margin: auto;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;

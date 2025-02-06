@@ -76,27 +76,27 @@ function rtanj_post_types(){
         'menu_icon' => 'dashicons-media-document',
     ));
 
-    // Galerija Post Type
+    // Smestaj Post Type
 
-    register_post_type('galerija', array(
+    register_post_type('smestaj', array(
         'supports' => array('title', 'thumbnail'),
-        'rewrite' => array('slug' => 'galerija'),
+        'rewrite' => array('slug' => 'smestaj'),
         'has_archive' => true,
         'public' => true,
         'show_in_rest' => true,
         'labels' => array(
-            'name' => __( 'Galerije', 'rtanj-kopaonik-theme' ),
-            'singular_name' => __( 'Galerija', 'rtanj-kopaonik-theme' ),
+            'name' => __( 'Smeštaji', 'rtanj-kopaonik-theme' ),
+            'singular_name' => __( 'Smeštaj', 'rtanj-kopaonik-theme' ),
             'add_new' => __( 'Dodaj novi', 'rtanj-kopaonik-theme' ),
-            'add_new_item' => __( 'Dodaj novu Galeriju', 'rtanj-kopaonik-theme' ),
-            'new_item' => __( 'Nova Galerija', 'rtanj-kopaonik-theme' ),
-            'view_item' => __( 'Vidi Galeriju', 'rtanj-kopaonik-theme' ),
-            'view_items' => __( 'Vidi Galerije', 'rtanj-kopaonik-theme' ),
-            'edit_item' => __( 'Izmeni Galeriju', 'rtanj-kopaonik-theme' ),
-            'all_items' => __( 'Sve Galerije', 'rtanj-kopaonik-theme' ),
-            'search_items' => __( 'Pretraži Galeriju', 'rtanj-kopaonik-theme' ),
-            'not_found' => __( 'Nema pronadjenih Galerija', 'rtanj-kopaonik-theme' ),
-            'not_found_in_trash' => __( 'Nema Galerija pronadjenih u otpadu', 'rtanj-kopaonik-theme' ),
+            'add_new_item' => __( 'Dodaj novi Smeštaj', 'rtanj-kopaonik-theme' ),
+            'new_item' => __( 'Novi Smeštaj', 'rtanj-kopaonik-theme' ),
+            'view_item' => __( 'Vidi Smeštaj', 'rtanj-kopaonik-theme' ),
+            'view_items' => __( 'Vidi Smeštaje', 'rtanj-kopaonik-theme' ),
+            'edit_item' => __( 'Izmeni Smeštaj', 'rtanj-kopaonik-theme' ),
+            'all_items' => __( 'Svi Smeštaji', 'rtanj-kopaonik-theme' ),
+            'search_items' => __( 'Pretraži Smeštaj', 'rtanj-kopaonik-theme' ),
+            'not_found' => __( 'Nema pronadjenih Smeštaja', 'rtanj-kopaonik-theme' ),
+            'not_found_in_trash' => __( 'Nema Smeštaja pronadjenih u otpadu', 'rtanj-kopaonik-theme' ),
         ),
         'menu_icon' => 'dashicons-format-gallery',
     ));

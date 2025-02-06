@@ -23,6 +23,8 @@
                         
                     }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
 
@@ -52,6 +54,8 @@
 
                     }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
 
@@ -112,13 +116,14 @@
                         
                     <?php }
                 }
+                wp_reset_query();
             ;?>
         </div>
 
         <div class="query query--fullwidth">
             <?php 
                 $gallery = new WP_Query(array(
-                    'post_type' => 'galerija',
+                    'post_type' => 'smestaj',
                     'posts_per_page' => -1,
                     'order' => 'ASC'
                 ));
@@ -143,6 +148,8 @@
                             <?php } ?>
                     <?php }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
     </section>
@@ -208,6 +215,8 @@
 
                     }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
 
@@ -240,6 +249,8 @@
                     
                     <?php }
                 }
+
+                wp_reset_query();
             ;?>
         </div>
 

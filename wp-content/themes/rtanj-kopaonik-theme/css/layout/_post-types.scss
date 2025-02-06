@@ -1,0 +1,27 @@
+//Specijalne ponude post
+
+@use '../base/' as *;
+
+.single {
+    &-specijalne-ponude, &-sadrzaj, &-aktivnosti, &-smestaj {
+        .site-content {
+            margin-bottom: 70px;
+
+            @media screen and (min-width: $large) {
+                width: 100%;
+            }
+        }
+    }
+
+    &-specijalne-ponude {
+        .offers {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.offers {
+    i {
+        margin-right: 10px;
+    }
+}
