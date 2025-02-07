@@ -23,7 +23,7 @@
 
     <div class="booking__item">
         <label for="gosti">Broj gostiju</label>
-        <input type="number" id="gosti">
+        <input type="number" id="gosti" min="1">
     </div>
 
     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>

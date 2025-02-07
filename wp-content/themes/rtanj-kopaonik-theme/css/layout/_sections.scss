@@ -7,19 +7,21 @@
     padding-bottom: 80px;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 
     &--dark {
         background-color: $themeBlue;
+        overflow: visible;
     }
 
     &__content {
-        padding: 30px 0;
+        padding: 30px 0 50px;
         width:82%;
         margin: auto;
 
         @media screen and (min-width: $large) {
             width:50%;
-            padding: 0 0 60px;
+            margin: 0 auto;
         }
 
         h6 {

@@ -86,7 +86,13 @@ h4 {
 
 h5 {
   font-family: "Segoe", sans-serif;
-  font-size: 20px;
+  font-size: 19px;
+  line-height: 30px;
+}
+@media screen and (min-width: 1440px) {
+  h5 {
+    font-size: 22px;
+  }
 }
 
 h6 {
@@ -199,13 +205,59 @@ h6 {
 }
 
 .query {
-  display: flex;
-  justify-content: space-around;
   text-align: left;
+  position: relative;
+  padding-top: 50px;
+  overflow: hidden;
+}
+.query .fa-angle-left, .query .fa-angle-right {
+  position: absolute;
+  top: 40%;
+  z-index: 10;
+  font-size: 25px;
+  color: #1C4259;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  top: 40%;
+}
+.query .fa-angle-left {
+  left: 25px;
+}
+.query .fa-angle-right {
+  right: 25px;
+}
+.query__wrap {
+  display: grid;
+  grid-template-columns: repeat(6, 100%);
+  padding-top: 15px;
+}
+.query__wrap--gallery {
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 980px) {
+  .query__wrap {
+    grid-template-columns: repeat(6, 33.3%);
+  }
 }
 .query--nofullwidth {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  justify-content: space-around;
+  padding: 0 23px;
+}
+.query--nofullwidth .fa-angle-right {
+  right: -25px;
+}
+.query--nofullwidth .fa-angle-left {
+  left: -25px;
+}
+.query--nofullwidth .query__wrap {
+  padding-bottom: 70px;
 }
 .query--faq {
   display: block;
@@ -213,18 +265,23 @@ h6 {
   margin: 0 auto;
 }
 .query--gallery-titles {
+  padding: 0;
   width: 50%;
   margin: auto;
-  margin-bottom: 50px;
+}
+.query--gallery-titles h5 {
+  cursor: pointer;
 }
 .query .gallery {
   width: 100%;
-  display: none;
+  display: flex;
+  flex-direction: row;
 }
 .query .gallery li {
   width: 33.3333333333%;
-  height: 240px;
+  height: 200px;
   position: relative;
+  border-radius: 0;
   overflow: hidden;
 }
 .query .gallery li img {
@@ -233,9 +290,6 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.query .gallery:first-of-type {
-  display: flex;
 }
 .query .offers {
   display: flex;
@@ -247,19 +301,21 @@ h6 {
   padding-bottom: 80px;
   position: relative;
   z-index: 1;
+  overflow: hidden;
 }
 .section--dark {
   background-color: #1C4259;
+  overflow: visible;
 }
 .section__content {
-  padding: 30px 0;
+  padding: 30px 0 50px;
   width: 82%;
   margin: auto;
 }
 @media screen and (min-width: 980px) {
   .section__content {
     width: 50%;
-    padding: 0 0 60px;
+    margin: 0 auto;
   }
 }
 .section__content h6 {
@@ -410,6 +466,7 @@ h6 {
   margin-top: 150px;
   height: 45vh;
   text-transform: uppercase;
+  overflow: visible;
 }
 @media screen and (min-width: 2000px) {
   .counter {
@@ -743,6 +800,7 @@ nav .menu .logo-item {
   text-align: center;
   padding: 15px 10px 10px;
   background-color: white;
+  color: #1C4259;
   border-radius: 15px 0 0 15px;
   width: 35%;
 }
@@ -766,15 +824,34 @@ nav .menu .logo-item {
   width: 70%;
   margin: 0 auto 80px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 980px) {
+  .booking {
+    justify-content: space-between;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .booking {
+    width: 70%;
+  }
 }
 .booking__item {
-  border-right: 2px solid #1C4259;
-  padding: 10px 40px;
+  width: 100%;
+  padding-bottom: 20px;
 }
-.booking__item:last-of-type {
-  border: none;
+@media screen and (min-width: 980px) {
+  .booking__item {
+    border-right: 2px solid #1C4259;
+    width: 23%;
+    padding: 20px;
+  }
+  .booking__item:last-of-type {
+    border: none;
+  }
 }
 .booking i {
   background-color: #CBAF96;
@@ -796,6 +873,7 @@ nav .menu .logo-item {
 .booking input, .booking select {
   background-color: rgba(203, 175, 150, 0.07);
   border-radius: 10px;
+  width: 100%;
 }
 
 .newsletter {
@@ -888,7 +966,6 @@ nav .menu .logo-item {
 }
 
 .card {
-  width: 30%;
   position: relative;
   padding: 43px 73px 43px 43px;
   border-radius: 20px;
@@ -911,12 +988,14 @@ nav .menu .logo-item {
 }
 .card__content p {
   padding-top: 10px;
+  display: none;
 }
 .card__content a {
   display: inline-block;
   margin: 22px 0;
   font-weight: 700;
   position: relative;
+  display: none;
 }
 .card__content a::after {
   content: "";
@@ -943,7 +1022,7 @@ nav .menu .logo-item {
   z-index: 10;
   border-radius: 20px;
 }
-.card--bordered:hover h4::after {
+.card--bordered:hover h5::after {
   content: "";
   display: block;
   height: 3px;
@@ -955,8 +1034,8 @@ nav .menu .logo-item {
   content: "";
   display: block;
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 20px;
+  left: 20px;
   width: 100%;
   height: 100%;
   border: 2px solid #CBAF96;
@@ -974,23 +1053,29 @@ nav .menu .logo-item {
   border-radius: 24px;
   overflow: hidden;
   position: relative;
+  padding: 23px;
+  transform: scale(1);
 }
-.card--scaled:hover::before {
+.card--scaled::after {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.67);
-  z-index: 10;
-  border-radius: 20px;
+  background: linear-gradient(to top left, #000 0%, transparent 67%);
 }
 .card--scaled .content {
+  padding: 50px;
+}
+.card--scaled:nth-of-type(2) .content {
   padding: 23px;
 }
-.card--scaled:nth-of-type(2) {
-  margin: 0 34px;
+.card--scaled:nth-of-type(2) p {
+  display: block;
+}
+.card--scaled:nth-of-type(2) a {
+  display: inline-block;
 }
 
 .faq {

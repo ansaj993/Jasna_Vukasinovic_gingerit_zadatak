@@ -6,15 +6,31 @@
     width: 70%;
     margin: 0 auto 80px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $large) {
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    @media screen and (min-width: $xlarge) {
+        width: 70%;
+    }
 
     &__item {
-        border-right: 2px solid $themeBlue;
-        padding: 10px 40px;
+        width: 100%;
+        padding-bottom: 20px;
       
-        &:last-of-type {
-            border: none;
+        @media screen and (min-width: $large) {
+            border-right: 2px solid $themeBlue;
+            width: 23%;
+            padding: 20px;
+          
+            &:last-of-type {
+                border: none;
+            }        
         }
     }
 
@@ -40,6 +56,7 @@
     input, select {
         background-color: rgba(203, 175, 150, .07);
         border-radius: 10px;
+        width: 100%;
     }    
 
 }

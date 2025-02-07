@@ -3,13 +3,66 @@
 @use '../base/' as *;
 
 .query {
-    display: flex;
-    justify-content: space-around;
     text-align: left;
+    position: relative;
+    padding-top: 50px;
+    overflow: hidden;
+
+    .fa-angle-left, .fa-angle-right {
+        position: absolute;
+        top: 40%;
+        z-index: 10;
+        font-size: 25px;
+        color: $themeBlue;
+        width: 70px;
+        height: 70px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        top: 40%;
+    }
+
+    .fa-angle-left {
+        left: 25px;
+    }
+    
+    .fa-angle-right {
+        right: 25px;
+    }
+    
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        padding-top: 15px;    
+
+        &--gallery {
+            flex-wrap: wrap;
+        }
+        
+        @media screen and (min-width:$large) {
+            grid-template-columns: repeat(6, 33.3%);
+        }
+    }
 
     &--nofullwidth {
-        width: $width95;
+        width: $width90;
         margin: 0 auto;
+        justify-content: space-around;
+        padding: 0 23px;
+
+        .fa-angle-right {
+            right: -25px;
+        }
+
+        .fa-angle-left {
+            left: -25px;
+        }
+
+        .query__wrap {
+            padding-bottom: 70px;
+        }
     }
 
     &--faq {
@@ -19,18 +72,24 @@
     }
 
     &--gallery-titles {
+        padding: 0;
         width: 50%;
         margin: auto;
-        margin-bottom: 50px;
+
+        h5 {
+            cursor: pointer;
+        }
     }
 
     .gallery {
         width: 100%;
-        display: none;
+        display: flex;
+        flex-direction: row;
         li {
             width: calc(100% / 3);
-            height: 240px;
+            height: 200px;
             position: relative;
+            border-radius: 0;
             overflow: hidden;
             img {
                 width: 100%;
@@ -39,9 +98,6 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
-        }
-        &:first-of-type {
-            display: flex;
         }
     }
 

@@ -8,6 +8,7 @@
     margin-top: 150px;
     height: 45vh;
     text-transform: uppercase;
+    overflow: visible;
 
     @media screen and (min-width: $huge) {
         margin-top: 300px;

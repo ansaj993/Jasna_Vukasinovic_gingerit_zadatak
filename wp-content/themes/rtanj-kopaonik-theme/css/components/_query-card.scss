@@ -3,11 +3,9 @@
 @use '../base/' as *;
 
 .card {
-    width: 30%;
     position: relative;
     padding: 43px 73px 43px 43px;
     border-radius: 20px;
-
 
     &__image {
         position: absolute;
@@ -27,6 +25,7 @@
 
         p {
             padding-top: 10px;
+            display: none;
         }
 
         a {
@@ -34,6 +33,7 @@
             margin: 22px 0;
             font-weight: 700;
             position: relative;
+            display: none;
             &::after {
                 content:'';
                 display: block;
@@ -66,7 +66,7 @@
             }
             
 
-            h4 {
+            h5 {
                 &::after {
                     content: '';
                     display: block;
@@ -75,16 +75,15 @@
                     background-color: white;
                     margin-top: 3px;
                 }
-            }
-    
+            }   
         }
         
         &::after {
             content: "";
             display: block;
             position: absolute;
-            top: 22px;
-            left: 22px;
+            top: 20px;
+            left: 20px;
             width: 100%;
             height: 100%;
             border: 2px solid $themeBrown;
@@ -105,27 +104,36 @@
         border-radius: 24px;
         overflow: hidden;
         position: relative;
+        padding: 23px;
+        transform: scale(1);
 
-        &:hover {
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.67);
-                z-index: 10;
-                border-radius: 20px;
-            }
-        }        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top left, #000 0%, transparent 67%);
+        }   
 
         .content {
-            padding: 23px;
+            padding: 50px;
         }
 
         &:nth-of-type(2){
-            margin: 0 34px;
+
+            .content {
+                padding: 23px;
+            }
+
+            p {
+                display: block;
+            }
+
+            a {
+                display: inline-block;
+            }
         }
     }
 
