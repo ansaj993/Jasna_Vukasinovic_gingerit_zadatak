@@ -38,15 +38,15 @@
     
     .images {
         width: $width85;
-        margin: 0 auto 60px;
+        margin: 30px auto 60px;
         display: flex;
 
         @media screen and (min-width: $large) {
-            margin: 0 auto 150px;
+            margin: 30px auto 150px;
         }
         
         @media screen and (min-width: $huge) {
-            margin: 0 auto 300px;
+            margin: 30px auto 300px;
         }
 
         &__item {

@@ -7,50 +7,27 @@
     position: relative;
     padding-top: 50px;
     overflow: hidden;
-
-    .fa-angle-left, .fa-angle-right {
-        position: absolute;
-        top: 40%;
-        z-index: 10;
-        font-size: 25px;
-        color: $themeBlue;
-        width: 70px;
-        height: 70px;
-        background-color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        top: 40%;
-    }
-
-    .fa-angle-left {
-        left: 25px;
-    }
-    
-    .fa-angle-right {
-        right: 25px;
-    }
     
     &__wrap {
         display: grid;
         grid-template-columns: repeat(6, 100%);
-        padding-top: 15px;    
+        padding-top: 35px;    
+
 
         &--gallery {
-            flex-wrap: wrap;
+          display: block;
         }
         
         @media screen and (min-width:$large) {
-            grid-template-columns: repeat(6, 33.3%);
+            grid-template-columns: repeat(6, 31%);
+            gap: 40px;
+
         }
     }
 
     &--nofullwidth {
-        width: $width90;
         margin: 0 auto;
         justify-content: space-around;
-        padding: 0 23px;
 
         .fa-angle-right {
             right: -25px;
@@ -63,6 +40,11 @@
         .query__wrap {
             padding-bottom: 70px;
         }
+
+        @media screen and (min-width: $large) {
+            width: $width90;
+            padding: 0 23px;
+        }
     }
 
     &--faq {
@@ -72,22 +54,34 @@
     }
 
     &--gallery-titles {
-        padding: 0;
+        padding: 50px 0 0;
         width: 50%;
         margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
         h5 {
             cursor: pointer;
+            border-bottom: 2px solid white;
+            width: 100%;
+            text-align: center;
+            &:first-of-type {
+                border-bottom: 2px solid $themeBlue;
+            }
+
+            @media screen and (min-width: $large) {
+                width: auto;
+            }
         }
     }
 
     .gallery {
         width: 100%;
-        display: flex;
-        flex-direction: row;
+        display: none;
+        grid-template-columns: repeat(6, 100%);
         li {
-            width: calc(100% / 3);
-            height: 200px;
+            height: 180px;
             position: relative;
             border-radius: 0;
             overflow: hidden;
@@ -98,6 +92,14 @@
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
+        }
+
+        &:first-of-type {
+            display: grid;
+        }
+
+        @media screen and (min-width: $large) {
+            grid-template-columns: repeat(6, 33.3%);
         }
     }
 

@@ -9,13 +9,63 @@
     z-index: 1;
     overflow: hidden;
 
+    &__bg {
+        position: absolute;
+        width: 25%;
+
+        img {
+            width: 100%;
+        }
+
+        &--top {
+            top: 0;
+            left: 5%;
+        }
+
+        &--bottom {
+            bottom: 5%;
+            right: 5%;
+        }
+    }
+
     &--dark {
         background-color: $themeBlue;
         overflow: visible;
     }
 
+    &__arrows {
+        position: absolute;
+        top: 45%;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .fa-angle-left, .fa-angle-right {
+            font-size: 25px;
+            color: $themeBlue;
+            width: 70px;
+            height: 70px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    } 
+
+    
+    &--gallery {
+        .section__arrows {
+            top: 70%;
+        
+            @media screen and (min-width: $large) {
+                top: 60%;
+            }
+        }
+    }
+
     &__content {
-        padding: 30px 0 50px;
+        padding-top: 30px;
         width:82%;
         margin: auto;
 

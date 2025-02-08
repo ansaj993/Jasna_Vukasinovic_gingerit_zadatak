@@ -2,6 +2,13 @@
 
 @use '../base/' as *;
 
+.testimonials {
+    .query__wrap {
+        padding-top: 70px;
+        padding-bottom: 20px;
+    }
+}
+
 .testimonial {
     padding: 38px;
     border: 2px solid $themeBlue;
@@ -16,7 +23,7 @@
         background-color: white;
         &:first-of-type {
             top: -33px;
-            left: -42px;
+            left: -40px;
         }
 
         &:last-of-type {

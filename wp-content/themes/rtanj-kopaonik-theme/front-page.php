@@ -6,13 +6,20 @@
     ?>
 
     <section class="section">
+        <div class="section__bg section__bg--top">
+            <img src="/wp-content/themes/rtanj-kopaonik-theme/img/Group 108.png" alt="section-bg">
+        </div>
         <div class="section__content section__content--dark">
             <h6 class="subtitle">NAJBOLJE CENE</h6>
             <h3 class="title">Specijalne ponude</h3>
         </div>
 
-        <div class="query query--carousel query--fullwidth">
+        <div class="section__arrows">
             <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="query query--carousel query--fullwidth">
 
             <div class="query__wrap">
                 <?php 
@@ -34,8 +41,6 @@
                     wp_reset_query();
                 ;?>
             </div>
-            
-            <i class="fa-solid fa-angle-right"></i>
         </div>
 
         <a href="<?php echo get_permalink( get_page_by_path( 'specijalne-ponude' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
@@ -48,8 +53,12 @@
             <p>Pobedi strahove i osvoji vrhove! Čekamo te na najlepšoj srpskoj planini, sa aktivnostima koje će razbuditi svaki atom tvog tela.</p>
         </div>
 
-        <div class="query query--carousel query--nofullwidth">
+        <div class="section__arrows">
             <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="query query--carousel query--nofullwidth">
 
             <?php 
                 $activities = new WP_Query(array(
@@ -72,11 +81,13 @@
                 wp_reset_query();?>
                 
             </div>
-            <i class="fa-solid fa-angle-right"></i>
-
         </div>
 
         <a href="<?php echo get_permalink( get_page_by_path( 'aktivnosti' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
+   
+        <div class="section__bg section__bg--bottom">
+            <img src="/wp-content/themes/rtanj-kopaonik-theme/img/Group 108.png" alt="section-bg">
+        </div>
     </section>
 
     <?php get_template_part( 'template-parts/content', 'counter' );?>
@@ -87,9 +98,13 @@
             <h3 class="title">Sadržaj</h3>
             <p>Nakon što osvojiš vrhove, vreme je za opuštanje. Izaberi svoje zadovoljstvo.</p>
         </div>
+
+        <div class="section__arrows">
+            <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
       
         <div class="query query--carousel query--nofullwidth">
-            <i class="fa-solid fa-angle-left"></i>
 
             <?php 
                 $contents = new WP_Query(array(
@@ -113,13 +128,12 @@
                 wp_reset_query();
                 ?>
             </div>
-            <i class="fa-solid fa-angle-right"></i>
         </div>
 
         <a href="<?php echo get_permalink( get_page_by_path( 'sadrzaji' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="section">
+    <section class="section section--gallery">
         <div class="section__content section__content--dark">
             <h6 class="subtitle">Galerija</h6>
             <h3 class="title">Vaš savršen odmor u slikama</h3>
@@ -146,8 +160,12 @@
             ;?>
         </div>
 
-        <div class="query query--carousel query--fullwidth">
+        <div class="section__arrows">
             <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="query query--carousel query--fullwidth">
 
             <div class="query__wrap query__wrap--gallery">
                 <?php 
@@ -182,7 +200,6 @@
                 ;?>
             </div>
             
-            <i class="fa-solid fa-angle-right"></i>
         </div>
     </section>
 
@@ -192,8 +209,12 @@
             <h3 class="title">Pogledaj šta naši gosti kažu o nama</h3>
         </div>
 
-        <div class="query query--carousel query--nofullwidth">
+        <div class="section__arrows">
             <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="query query--carousel testimonials query--nofullwidth">
 
             <?php 
                 $testimonials = new WP_Query(array(
@@ -226,7 +247,6 @@
                     wp_reset_query();
                 ;?>
             </div>
-            <i class="fa-solid fa-angle-right"></i>                
         </div>
     </section>
 
@@ -238,8 +258,12 @@
             <h3 class="title">Budi u toku sa dešavanjima na Kopu</h3>
         </div>
 
-        <div class="query query--carousel query--fullwidth">
+        <div class="section__arrows">
             <i class="fa-solid fa-angle-left"></i>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+
+        <div class="query query--carousel query--fullwidth">
             <div class="query__wrap">
                 <?php 
                     $blog = new WP_Query(array(
@@ -261,13 +285,15 @@
                 ;?>
             </div>
             
-            <i class="fa-solid fa-angle-right"></i>
         </div>
 
         <a href="<?php echo get_permalink( get_page_by_path( 'blog' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
-    <section class="section">
+    <section class="section faqs">
+        <div class="section__bg section__bg--top">
+            <img src="/wp-content/themes/rtanj-kopaonik-theme/img/Group 108.png" alt="section-bg">
+        </div>
         <div class="section__content section__content--dark">
             <h6 class="subtitle">Česta pitanja</h6>
             <h3 class="title">Imate Pitanja? Imamo Odgovore!</h3>
@@ -286,7 +312,7 @@
                         $blog->the_post();
                         ?>
 
-                        <div class="faq section__content--dark">
+                        <div class="faq section__content--dark close">
                             <h5 class="title"><?php the_title();?><i class="fa-solid fa-angle-down"></i></h5>
                             <?php the_content();?>
                         </div>
@@ -298,7 +324,7 @@
             ;?>
         </div>
 
-        <a href="#" class="button section__button">Učitaj sve <i class="fa-solid fa-angle-down"></i></a>
+        <button class="button section__button">Učitaj sve <i class="fa-solid fa-angle-down"></i></button>
     </section>
 </main>
 

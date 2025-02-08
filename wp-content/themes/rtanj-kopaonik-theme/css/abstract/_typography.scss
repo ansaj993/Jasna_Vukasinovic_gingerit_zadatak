@@ -10,7 +10,7 @@ a {
     text-decoration: none;
 }
 
-p, h3, li, input, a {
+p, h3, li, input, a, button {
     font-family: $contentFont;
     font-size: 15px;
     line-height: 27px;   
@@ -19,6 +19,11 @@ p, h3, li, input, a {
     @media screen and (min-width: $large) {
         font-size: 17px;
     }
+}
+
+button {
+    background-color: white;
+    cursor: pointer;
 }
 
 h1 {
