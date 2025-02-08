@@ -33,6 +33,16 @@
         overflow: visible;
     }
 
+    &--testimonials {
+        .section__arrows {
+            top: 25%;
+        
+            @media screen and (min-width: $large) {
+                top: 50%;
+            }
+        }
+    }
+
     &__arrows {
         position: absolute;
         top: 45%;

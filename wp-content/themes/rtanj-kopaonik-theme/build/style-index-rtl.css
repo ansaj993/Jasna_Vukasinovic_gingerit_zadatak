@@ -332,6 +332,14 @@ h6 {
   background-color: #1C4259;
   overflow: visible;
 }
+.section--testimonials .section__arrows {
+  top: 25%;
+}
+@media screen and (min-width: 980px) {
+  .section--testimonials .section__arrows {
+    top: 50%;
+  }
+}
 .section__arrows {
   position: absolute;
   top: 45%;
@@ -1176,11 +1184,21 @@ nav .menu .logo-item {
 }
 .testimonial i:first-of-type {
   top: -33px;
-  right: -40px;
+  right: -2px;
 }
 .testimonial i:last-of-type {
   bottom: -32px;
-  left: -42px;
+  left: -5px;
+}
+@media screen and (min-width: 980px) {
+  .testimonial i:first-of-type {
+    top: -33px;
+    right: -22px;
+  }
+  .testimonial i:last-of-type {
+    bottom: -32px;
+    left: -42px;
+  }
 }
 .testimonial .name {
   padding-top: 34px;

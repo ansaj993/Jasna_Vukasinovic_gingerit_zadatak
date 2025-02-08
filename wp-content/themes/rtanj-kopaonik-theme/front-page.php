@@ -36,6 +36,8 @@
                             get_template_part( 'template-parts/content', 'card-scaled' );
                             
                         }
+                    } else {
+                        echo '<p>No recent posts</p>';
                     }
 
                     wp_reset_query();
@@ -77,6 +79,8 @@
                         get_template_part( 'template-parts/content', 'card-bordered' );
 
                     }
+                } else {
+                    echo '<p>No recent posts</p>';
                 };
                 wp_reset_query();?>
                 
@@ -123,6 +127,8 @@
                         get_template_part( 'template-parts/content', 'card-bordered' );
 
                     }
+                } else {
+                    echo '<p>No recent posts</p>';
                 };
 
                 wp_reset_query();
@@ -130,7 +136,7 @@
             </div>
         </div>
 
-        <a href="<?php echo get_permalink( get_page_by_path( 'sadrzaji' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
+        <a href="<?php echo get_permalink( get_page_by_path( 'sadrzaj' ) ); ?>" class="button section__button">Pogledaj ponudu</a>
     </section>
 
     <section class="section section--gallery">
@@ -155,6 +161,8 @@
                         <h5 class="query__title"><?php the_title();?></h5>
                         
                     <?php }
+                } else {
+                    echo '<p>No recent posts</p>';
                 }
                 wp_reset_query();
             ;?>
@@ -194,6 +202,8 @@
                                     </ul>
                                 <?php } ?>
                         <?php }
+                    } else {
+                        echo '<p>No recent posts</p>';
                     }
 
                     wp_reset_query();
@@ -203,7 +213,7 @@
         </div>
     </section>
 
-    <section class="section">
+    <section class="section section--testimonials">
         <div class="section__content section__content--dark">
             <h6 class="subtitle">Iskustva korisnika</h6>
             <h3 class="title">Pogledaj šta naši gosti kažu o nama</h3>
@@ -243,6 +253,8 @@
                             </div>
                         
                         <?php }
+                    } else {
+                        echo '<p>No recent posts</p>';
                     }
                     wp_reset_query();
                 ;?>
@@ -279,6 +291,8 @@
                             get_template_part( 'template-parts/content', 'card-scaled' );
 
                         }
+                    } else {
+                        echo '<p>No recent posts</p>';
                     }
 
                     wp_reset_query();
@@ -318,6 +332,8 @@
                         </div>
                     
                     <?php }
+                } else {
+                    echo '<p>No recent posts</p>';
                 }
 
                 wp_reset_query();

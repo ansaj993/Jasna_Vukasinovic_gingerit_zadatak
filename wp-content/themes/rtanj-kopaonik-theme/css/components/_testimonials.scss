@@ -21,15 +21,29 @@
         position: absolute;
         padding: 8px 17px;
         background-color: white;
+
         &:first-of-type {
             top: -33px;
-            left: -40px;
+            left: -2px;
         }
 
         &:last-of-type {
             bottom: -32px;
-            right: -42px;
+            right: -5px;
         }
+
+        @media screen and (min-width: $large) {
+            &:first-of-type {
+                top: -33px;
+                left: -22px;
+            }
+    
+            &:last-of-type {
+                bottom: -32px;
+                right: -42px;
+            }
+        }
+      
     }
 
     .name {
