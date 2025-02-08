@@ -4,10 +4,14 @@
 
 .section {
     text-align: center;
-    padding-bottom: 80px;
+    padding-bottom: 50px;
     position: relative;
     z-index: 1;
     overflow: hidden;
+
+    @media screen and (min-width: $large) {
+        padding-bottom: 80px;
+    }
 
     &__bg {
         position: absolute;
@@ -75,13 +79,14 @@
     }
 
     &__content {
-        padding-top: 30px;
+        padding-top: 50px;
         width:82%;
         margin: auto;
 
         @media screen and (min-width: $large) {
             width:50%;
             margin: 0 auto;
+            padding-top: 0px;
         }
 
         h6 {
@@ -130,11 +135,15 @@
         border: 2px solid $themeBrown;
         border-radius: 10px;
         transition: all .5s ease-in-out;
-        margin-top: 100px;
+        margin-top: 50px;
         font-weight: 600;
         &:hover {
             background-color: $themeBrown;
             color: white;
+        }
+
+        @media screen and (min-width: $large) {
+            margin-top: 100px;
         }
     }
 }
