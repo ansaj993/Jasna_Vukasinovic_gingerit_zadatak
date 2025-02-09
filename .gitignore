@@ -6,9 +6,6 @@ wp-config.php
 # Example themes
 /wp-content/themes/twenty*/
 
-# Uploads
-/wp-content/uploads/
-
 # Log files
 *.log
 
